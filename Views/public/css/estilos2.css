@@ -1,0 +1,16 @@
+.logo{
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+
+  .error {
+    color: red;
+    font-size: 90%;
+}
+
+.color {
+			color: #FF4500;
+			font-weight: 700;
+		}
+

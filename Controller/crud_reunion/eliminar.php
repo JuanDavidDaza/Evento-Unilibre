@@ -35,11 +35,21 @@ if (isset($row112['idevento'])) {
 	}
 }
 
+
+$sql1 = "DELETE FROM evento_entidades WHERE idevento = '$idevento'";
+$sql2 = "DELETE FROM evento_programas WHERE idevento = '$idevento'";
+$sql3 = "DELETE FROM evento_sesion WHERE idevento = '$idevento'";
+$sql4 = "DELETE FROM asistente_sesion WHERE idevento = '$idevento'";
+$sql5 = "DELETE FROM pre_inscripcion WHERE idevento = '$idevento'";
+
+
 $resultado1 = $link->query($sql1);
 $resultado2 = $link->query($sql2);
-$resultado4 = $link->query($sql4);
 $resultado3 = $link->query($sql3);
 $resultado5 = $link->query($sql5);
+$resultado4 = $link->query($sql4);
+
+
 
 
 $sql = "DELETE FROM evento WHERE idevento = '$idevento'";

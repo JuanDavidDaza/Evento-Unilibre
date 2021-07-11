@@ -41,8 +41,8 @@ if (isset($row112['idevento'])) {
 $resultado1 = $link->query($sql1);
 $resultado2 = $link->query($sql2);
 //$resultado3 = $link->query($sql3);
-$resultado4 = $link->query($sql4);
-$resultado5 = $link->query($sql5);
+$resultado4 = $link->query($sql5);
+$resultado5 = $link->query($sql4);
 $resultado6 = $link->query($sql6);
 $resultado7 = $link->query($sql7);
 

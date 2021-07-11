@@ -6,4 +6,3 @@
 	$_SESSION = array();
 	session_destroy(); */
 require('../Views/authorization.php');
-?>

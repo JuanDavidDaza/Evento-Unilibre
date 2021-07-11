@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/permisos/imprimir.php');
-?>
+require('../../../Controller/permisos/imprimir.php');

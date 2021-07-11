@@ -13,4 +13,3 @@
 	$row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
 
 require_once "../../../Views/funtion/crud_conferencista/modificar1.php";
-?>

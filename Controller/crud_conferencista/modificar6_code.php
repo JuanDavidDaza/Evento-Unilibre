@@ -11,5 +11,3 @@
 $nombreevento=$row['nombreevento'];
 
 require_once "../../../Views/funtion/crud_conferencista/modificar6.php";
-?>
-

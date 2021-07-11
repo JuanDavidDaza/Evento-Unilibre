@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_conferencista/update_code.php');
-?>
+require('../../../Controller/crud_conferencista/update_code.php');

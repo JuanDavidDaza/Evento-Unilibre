@@ -1,3 +1,2 @@
 <?php
-  require('../../Controller/admin_code/perfil.php');
-?>
+require('../../Controller/admin_code/perfil.php');

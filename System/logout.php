@@ -1,3 +1,2 @@
 <?php
-  require('../Controller/admin_code/logout.php');
-?>
+require('../Controller/admin_code/logout.php');

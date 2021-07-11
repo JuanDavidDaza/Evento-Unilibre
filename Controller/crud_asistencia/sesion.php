@@ -14,7 +14,3 @@
 	$row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
 	
   require('../../../Views/funtion/crud_asistencia/sesion.php');
-  
-	
-
-?>

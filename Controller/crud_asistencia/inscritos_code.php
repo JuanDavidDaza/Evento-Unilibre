@@ -23,6 +23,3 @@
   
   
   require('../../../Views/funtion/crud_asistencia/inscritos.php');
-	
-
-?>

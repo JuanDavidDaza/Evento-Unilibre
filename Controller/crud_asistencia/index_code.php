@@ -17,5 +17,3 @@
 	}
 
 	require('../../../Views/funtion/crud_asistencia/index.php');
-	
-?>

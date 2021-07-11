@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_institucion/eliminar.php');
-?>
+require('../../../Controller/crud_institucion/eliminar.php');

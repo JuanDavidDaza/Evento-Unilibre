@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_conferencista/imprimir.php');
-?>
+require('../../../Controller/crud_conferencista/imprimir.php');

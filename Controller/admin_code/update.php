@@ -1,11 +1,11 @@
-<?php 
+<?php
 require_once "../../Model/BD.php";
 require_once "../../Model/code.php";
 session_start();
-	  $rol_id=$_SESSION['rol_id'];
-	  
-if ($rol_id==1 || $rol_id==4) {
-	$menu="
+$rol_id = $_SESSION['rol_id'];
+
+if ($rol_id == 1 || $rol_id == 4) {
+  $menu = "
 	<li class='nav-item active'>
         <a class='nav-link' href='permisos/index.php'>
           <i class='fas fa-fw fa-key'></i>
@@ -74,10 +74,8 @@ if ($rol_id==1 || $rol_id==4) {
       </li>
 
       ";
-}
-
-else if($rol_id==2){
-	$menu="
+} else if ($rol_id == 2) {
+  $menu = "
 	<hr class='sidebar-divider d-none d-md-block'>
       <li class='nav-item active'>
         <a class='nav-link' href='crud_asistencia/index.php'>
@@ -87,221 +85,201 @@ else if($rol_id==2){
 
 
 	";
+} else {
+  $menu = "";
 }
-else{
-	$menu="";
+$sqlrol_id = "SELECT rol FROM rol  WHERE id='$rol_id'";
+$resultado_rol_id = $link->query($sqlrol_id);
+foreach ($resultado_rol_id as $row_nombre_rol) {
+  $nombre_rol = $row_nombre_rol['rol'];
 }
-	  $sqlrol_id="SELECT rol FROM rol  WHERE id='$rol_id'";
-	  $resultado_rol_id = $link->query($sqlrol_id);
-	  foreach($resultado_rol_id as $row_nombre_rol){
-			$nombre_rol=$row_nombre_rol['rol'];
-	  }
 
 
-	  if ($rol_id= null || $rol_id="" || $rol_id != 1 && $rol_id != 2 && $rol_id != 4 && $rol_id != 3) {
-	   echo "Usted no tiene autorización";
-	   header('location: ../authorization.php');
-	   die();
-	  }
+if ($rol_id = null || $rol_id = "" || $rol_id != 1 && $rol_id != 2 && $rol_id != 4 && $rol_id != 3) {
+  echo "Usted no tiene autorización";
+  header('location: ../authorization.php');
+  die();
+}
 
 
 
-	  $usuario=$_SESSION['usuario'];
+$usuario = $_SESSION['usuario'];
 
 
 
-	  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			
-	  	$idciudad = (isset($_POST['idciudad']))?$_POST['idciudad']:"";
-	  	$_SESSION['idciudad']=$idciudad;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  $idciudad = (isset($_POST['idciudad'])) ? $_POST['idciudad'] : "";
+  $_SESSION['idciudad'] = $idciudad;
 
 
 
-	  	$ciudad1="SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
-	  	$ciudadresp = $link->query($ciudad1);
-		foreach($ciudadresp as $rowciudadresp){
-			$nombreciudad12=$rowciudadresp['nombre'];
-		}
+  $ciudad1 = "SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
+  $ciudadresp = $link->query($ciudad1);
+  foreach ($ciudadresp as $rowciudadresp) {
+    $nombreciudad12 = $rowciudadresp['nombre'];
+  }
 
-	  	//echo "<script> alert('Seleccionaste la Ciudad de ".$nombreciudad12." ')</script>";
+  //echo "<script> alert('Seleccionaste la Ciudad de ".$nombreciudad12." ')</script>";
 
 
-	  }
-	  else{
-	  	$idciudad=$_SESSION['idciudad'];
-	  	
-	  }
+} else {
+  $idciudad = $_SESSION['idciudad'];
+}
 
 
 
 
 
 $BD = new basedatos();
-$cboidciudad = $BD->ListaValoresDef('idciudad','ciudad','idciudad','ciudad.nombre', $idciudad);
+$cboidciudad = $BD->ListaValoresDef('idciudad', 'ciudad', 'idciudad', 'ciudad.nombre', $idciudad);
 
-$ciudad="SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
+$ciudad = "SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
 $ciudadr = $link->query($ciudad);
 
 
 
-foreach($ciudadr as $rowciudad){
-	$nombreciudad=$rowciudad['nombre'];
+foreach ($ciudadr as $rowciudad) {
+  $nombreciudad = $rowciudad['nombre'];
 }
 
-$idusuario=$_SESSION["id"];
-$idusuario1="SELECT * FROM usuarios INNER JOIN ciudad ON usuarios.idciudad = ciudad.idciudad  WHERE id='$idusuario'";
+$idusuario = $_SESSION["id"];
+$idusuario1 = "SELECT * FROM usuarios INNER JOIN ciudad ON usuarios.idciudad = ciudad.idciudad  WHERE id='$idusuario'";
 $resultadousuarioc = $link->query($idusuario1);
 
 
 
-foreach($resultadousuarioc as $rowusuario){
-	$nombreciudad1=$rowusuario['nombre'];
+foreach ($resultadousuarioc as $rowusuario) {
+  $nombreciudad1 = $rowusuario['nombre'];
 }
 
 
-$ciudad1=$_SESSION['idciudad'];
-$ciudadevento="SELECT nombre FROM ciudad WHERE idciudad='$ciudad1'";
-		$ciudadrespuesta = $link->query($ciudadevento);
-		foreach($ciudadrespuesta as $rowciudadrespuesta){
-			$nombreciudadevento=$rowciudadrespuesta['nombre'];
-      
-		}
+$ciudad1 = $_SESSION['idciudad'];
+$ciudadevento = "SELECT nombre FROM ciudad WHERE idciudad='$ciudad1'";
+$ciudadrespuesta = $link->query($ciudadevento);
+foreach ($ciudadrespuesta as $rowciudadrespuesta) {
+  $nombreciudadevento = $rowciudadrespuesta['nombre'];
+}
 
 
 
 
-  $txtFoto=(isset($_FILES['txtFoto']["name"]))?$_FILES['txtFoto']["name"]:"";
-  $id = (isset($_POST['id']))?$_POST['id']:"";
-  $usuario_f = (isset($_POST['usuario']))?$_POST['usuario']:"";
-  $email=(isset($_POST['email']))?$_POST['email']:"";
-  $email2=(isset($_POST['email2']))?$_POST['email2']:"";
-  $password=(isset($_POST['password']))?$_POST['password']:"";
-  $idciudad_f=(isset($_POST['idciudad']))?$_POST['idciudad']:"";
-  //echo $email . " despues :";
-  $rol_id_f=(isset($_POST['rol_id']))?$_POST['rol_id']:"";
-  $clave=SED::encryption($password);
-  //echo $email2;
+$txtFoto = (isset($_FILES['txtFoto']["name"])) ? $_FILES['txtFoto']["name"] : "";
+$id = (isset($_POST['id'])) ? $_POST['id'] : "";
+$usuario_f = (isset($_POST['usuario'])) ? $_POST['usuario'] : "";
+$email = (isset($_POST['email'])) ? $_POST['email'] : "";
+$email2 = (isset($_POST['email2'])) ? $_POST['email2'] : "";
+$password = (isset($_POST['password'])) ? $_POST['password'] : "";
+$idciudad_f = (isset($_POST['idciudad'])) ? $_POST['idciudad'] : "";
+//echo $email . " despues :";
+$rol_id_f = (isset($_POST['rol_id'])) ? $_POST['rol_id'] : "";
+$clave = SED::encryption($password);
+//echo $email2;
 
-  $Fecha= new DateTime(); 
-  $nombreArchivo=($txtFoto!="")?$Fecha->getTimestamp()."_".$_FILES["txtFoto"]["name"]:"user.png";
-  $tmpFoto= $_FILES["txtFoto"]["tmp_name"];
-
-  
-
-
-  if ($email==$email2){
-    $sql = "UPDATE usuarios SET usuario='$usuario_f', email='$email', clave='$clave', rol_id='$rol_id_f', idciudad='$idciudad_f' WHERE id = '$id'";
-    $resultado = $link->query($sql);
-    if ($tmpFoto!="") {
-              //si tmpFoto no esta vacio manda el archivo a esa ruta 
-              move_uploaded_file($tmpFoto,"../../Content/user/".$nombreArchivo);
-
-
-                        
-              $sql1 = "SELECT foto FROM usuarios WHERE id='$id'";
-              $resultado1 = $link->query($sql1);
-              $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
-
-                  
-
-              //se borra la foto vieja y se guarda la nueva 
-              if (isset($row1["foto"])) {
-                    if (file_exists("../../Content/user/".$row1["foto"])) {
-                      //si es user.png que es la imagen por defecto, no se va a eliminar 
-                          if ($row1['foto']!="user.png") {
-                                unlink("../../Content/user/".$row1["foto"]);
-                        }
-                                    
-                    }
-              }
-
-              $sql2 = "UPDATE usuarios SET foto='$nombreArchivo' WHERE id='$id'";
-              $resultado2 = $link->query($sql2);
-              $_SESSION["foto"]= $nombreArchivo;
-            
-    }
-
-            $_SESSION["id"]= $id;
-            $_SESSION["usuario"]=$usuario_f;
-            $_SESSION["email"]=$email;
-            $_SESSION["rol_id"]= $rol_id_f;
-            $_SESSION["idciudad"]= $idciudad_f;
-            $mensaje="Modificado Correctamente";
-
-            //echo $_SESSION["usuario"];
-
-  }
-  else{
-    $sql="SELECT usuario FROM usuarios WHERE email='$email'";
-
-    if ($sql = mysqli_prepare($link, $sql)) {
-        if (mysqli_stmt_execute($sql)) {
-          mysqli_stmt_store_result($sql);
-          
-          if(mysqli_stmt_num_rows($sql) == 1){
-            
-            $mensaje = 'Este Correo ya esta registrado';
-          }
-          else{
-             $clave=SED::encryption($password);
-
-            $sql = "UPDATE usuarios SET usuario='$usuario_f', email='$email', clave='$clave', rol_id='$rol_id_f', idciudad='$idciudad_f' WHERE id = '$id'";
-
-            $resultado = $link->query($sql);
-            if ($tmpFoto!="") {
-              //si tmpFoto no esta vacio manda el archivo a esa ruta 
-              move_uploaded_file($tmpFoto,"../../Content/user/".$nombreArchivo);
-
-
-                        
-              $sql1 = "SELECT foto FROM usuarios WHERE id='$id'";
-              $resultado1 = $link->query($sql1);
-              $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
-
-                  
-
-              //se borra la foto vieja y se guarda la nueva 
-              if (isset($row1["foto"])) {
-                    if (file_exists("../../Content/user/".$row1["foto"])) {
-                      //si es user.png que es la imagen por defecto, no se va a eliminar 
-                          if ($row1['foto']!="user.png") {
-                                unlink("../../Content/user/".$row1["foto"]);
-                        }
-                                    
-                    }
-              }
-
-              $sql2 = "UPDATE usuarios SET foto='$nombreArchivo' WHERE id='$id'";
-              $resultado2 = $link->query($sql2);
-              $_SESSION["foto"]= $nombreArchivo;
-            
-            }
-
-            $_SESSION["id"]= $id;
-            $_SESSION["usuario"]=$usuario_f;
-            $_SESSION["email"]=$email;
-            $_SESSION["rol_id"]= $rol_id_f;
-            $_SESSION["idciudad"]= $idciudad_f;
-            $_SESSION["foto"]= $nombreArchivo;
-            $mensaje="Modificado Correctamente";
-
-            //echo $_SESSION["usuario"];
-
-          }
+$Fecha = new DateTime();
+$nombreArchivo = ($txtFoto != "") ? $Fecha->getTimestamp() . "_" . $_FILES["txtFoto"]["name"] : "user.png";
+$tmpFoto = $_FILES["txtFoto"]["tmp_name"];
 
 
 
+
+if ($email == $email2) {
+  $sql = "UPDATE usuarios SET usuario='$usuario_f', email='$email', clave='$clave', rol_id='$rol_id_f', idciudad='$idciudad_f' WHERE id = '$id'";
+  $resultado = $link->query($sql);
+  if ($tmpFoto != "") {
+    //si tmpFoto no esta vacio manda el archivo a esa ruta 
+    move_uploaded_file($tmpFoto, "../../Content/user/" . $nombreArchivo);
+
+
+
+    $sql1 = "SELECT foto FROM usuarios WHERE id='$id'";
+    $resultado1 = $link->query($sql1);
+    $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
+
+
+
+    //se borra la foto vieja y se guarda la nueva 
+    if (isset($row1["foto"])) {
+      if (file_exists("../../Content/user/" . $row1["foto"])) {
+        //si es user.png que es la imagen por defecto, no se va a eliminar 
+        if ($row1['foto'] != "user.png") {
+          unlink("../../Content/user/" . $row1["foto"]);
         }
       }
+    }
+
+    $sql2 = "UPDATE usuarios SET foto='$nombreArchivo' WHERE id='$id'";
+    $resultado2 = $link->query($sql2);
+    $_SESSION["foto"] = $nombreArchivo;
   }
 
- require('../../Views/funtion/vistas/parte_superior.php');
- require('../../Views/funtion/update.php');
- require('../../Views/funtion/vistas/parte_inferior.php');
+  $_SESSION["id"] = $id;
+  $_SESSION["usuario"] = $usuario_f;
+  $_SESSION["email"] = $email;
+  $_SESSION["rol_id"] = $rol_id_f;
+  $_SESSION["idciudad"] = $idciudad_f;
+  $mensaje = "Modificado Correctamente";
+
+  //echo $_SESSION["usuario"];
+
+} else {
+  $sql = "SELECT usuario FROM usuarios WHERE email='$email'";
+
+  if ($sql = mysqli_prepare($link, $sql)) {
+    if (mysqli_stmt_execute($sql)) {
+      mysqli_stmt_store_result($sql);
+
+      if (mysqli_stmt_num_rows($sql) == 1) {
+
+        $mensaje = 'Este Correo ya esta registrado';
+      } else {
+        $clave = SED::encryption($password);
+
+        $sql = "UPDATE usuarios SET usuario='$usuario_f', email='$email', clave='$clave', rol_id='$rol_id_f', idciudad='$idciudad_f' WHERE id = '$id'";
+
+        $resultado = $link->query($sql);
+        if ($tmpFoto != "") {
+          //si tmpFoto no esta vacio manda el archivo a esa ruta 
+          move_uploaded_file($tmpFoto, "../../Content/user/" . $nombreArchivo);
 
 
-?>
+
+          $sql1 = "SELECT foto FROM usuarios WHERE id='$id'";
+          $resultado1 = $link->query($sql1);
+          $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
 
 
 
+          //se borra la foto vieja y se guarda la nueva 
+          if (isset($row1["foto"])) {
+            if (file_exists("../../Content/user/" . $row1["foto"])) {
+              //si es user.png que es la imagen por defecto, no se va a eliminar 
+              if ($row1['foto'] != "user.png") {
+                unlink("../../Content/user/" . $row1["foto"]);
+              }
+            }
+          }
 
+          $sql2 = "UPDATE usuarios SET foto='$nombreArchivo' WHERE id='$id'";
+          $resultado2 = $link->query($sql2);
+          $_SESSION["foto"] = $nombreArchivo;
+        }
+
+        $_SESSION["id"] = $id;
+        $_SESSION["usuario"] = $usuario_f;
+        $_SESSION["email"] = $email;
+        $_SESSION["rol_id"] = $rol_id_f;
+        $_SESSION["idciudad"] = $idciudad_f;
+        $_SESSION["foto"] = $nombreArchivo;
+        $mensaje = "Modificado Correctamente";
+
+        //echo $_SESSION["usuario"];
+
+      }
+    }
+  }
+}
+
+require('../../Views/funtion/vistas/parte_superior.php');
+require('../../Views/funtion/update.php');
+require('../../Views/funtion/vistas/parte_inferior.php');

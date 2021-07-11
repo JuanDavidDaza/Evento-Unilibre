@@ -1,12 +1,12 @@
-<?php 
+<?php
 require_once "../../Model/BD.php";
 
 
 session_start();
-	  $rol_id=$_SESSION['rol_id'];
-	  
-if ($rol_id==1 || $rol_id==4) {
-	$menu="
+$rol_id = $_SESSION['rol_id'];
+
+if ($rol_id == 1 || $rol_id == 4) {
+  $menu = "
 	<li class='nav-item active'>
         <a class='nav-link' href='permisos/index.php'>
           <i class='fas fa-fw fa-key'></i>
@@ -75,10 +75,8 @@ if ($rol_id==1 || $rol_id==4) {
       </li>
 
       ";
-}
-
-else if($rol_id==2){
-	$menu="
+} else if ($rol_id == 2) {
+  $menu = "
 	<hr class='sidebar-divider d-none d-md-block'>
       <li class='nav-item active'>
         <a class='nav-link' href='crud_asistencia/index.php'>
@@ -88,87 +86,75 @@ else if($rol_id==2){
 
 
 	";
+} else {
+  $menu = "";
 }
-else{
-	$menu="";
+$sqlrol_id = "SELECT rol FROM rol  WHERE id='$rol_id'";
+$resultado_rol_id = $link->query($sqlrol_id);
+foreach ($resultado_rol_id as $row_nombre_rol) {
+  $nombre_rol = $row_nombre_rol['rol'];
 }
-	  $sqlrol_id="SELECT rol FROM rol  WHERE id='$rol_id'";
-	  $resultado_rol_id = $link->query($sqlrol_id);
-	  foreach($resultado_rol_id as $row_nombre_rol){
-			$nombre_rol=$row_nombre_rol['rol'];
-	  }
 
 
-	  if ($rol_id= null || $rol_id="" || $rol_id != 1 && $rol_id != 2 && $rol_id != 4 && $rol_id != 3) {
-	   echo "Usted no tiene autorización";
-	   header('location: ../authorization.php');
-	   die();
-	  }
+if ($rol_id = null || $rol_id = "" || $rol_id != 1 && $rol_id != 2 && $rol_id != 4 && $rol_id != 3) {
+  echo "Usted no tiene autorización";
+  header('location: ../authorization.php');
+  die();
+}
 
 
 
-	  $usuario=$_SESSION['usuario'];
+$usuario = $_SESSION['usuario'];
 
 
 
-	  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			
-	  	$idciudad = (isset($_POST['idciudad']))?$_POST['idciudad']:"";
-	  	$_SESSION['idciudad']=$idciudad;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  $idciudad = (isset($_POST['idciudad'])) ? $_POST['idciudad'] : "";
+  $_SESSION['idciudad'] = $idciudad;
 
 
 
-	  	$ciudad1="SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
-		$ciudadresp = $link->query($ciudad1);
-		foreach($ciudadresp as $rowciudadresp){
-			$nombreciudad12=$rowciudadresp['nombre'];
-		}
+  $ciudad1 = "SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
+  $ciudadresp = $link->query($ciudad1);
+  foreach ($ciudadresp as $rowciudadresp) {
+    $nombreciudad12 = $rowciudadresp['nombre'];
+  }
 
-	  	echo "<script> alert('Seleccionaste la Ciudad de ".$nombreciudad12." ')</script>";
-
-
-	  }
-	  else{
-	  	$idciudad=$_SESSION['idciudad'];
-	  	
-	  }
+  echo "<script> alert('Seleccionaste la Ciudad de " . $nombreciudad12 . " ')</script>";
+} else {
+  $idciudad = $_SESSION['idciudad'];
+}
 
 
 
 
 $BD = new basedatos();
-$cboidciudad = $BD->ListaValoresDef('idciudad','ciudad','idciudad','ciudad.nombre', $idciudad);
+$cboidciudad = $BD->ListaValoresDef('idciudad', 'ciudad', 'idciudad', 'ciudad.nombre', $idciudad);
 
-$ciudad="SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
+$ciudad = "SELECT nombre FROM ciudad WHERE idciudad='$idciudad'";
 $ciudadr = $link->query($ciudad);
 
 
 
-foreach($ciudadr as $rowciudad){
-	$nombreciudad=$rowciudad['nombre'];
+foreach ($ciudadr as $rowciudad) {
+  $nombreciudad = $rowciudad['nombre'];
 }
 
-$idusuario=$_SESSION["id"];
-$idusuario1="SELECT * FROM usuarios INNER JOIN ciudad ON usuarios.idciudad = ciudad.idciudad  WHERE id='$idusuario'";
+$idusuario = $_SESSION["id"];
+$idusuario1 = "SELECT * FROM usuarios INNER JOIN ciudad ON usuarios.idciudad = ciudad.idciudad  WHERE id='$idusuario'";
 $resultadousuarioc = $link->query($idusuario1);
 
 
 
-foreach($resultadousuarioc as $rowusuario){
-	$nombreciudad1=$rowusuario['nombre'];
+foreach ($resultadousuarioc as $rowusuario) {
+  $nombreciudad1 = $rowusuario['nombre'];
 }
 
 
-$ciudad1=$_SESSION['idciudad'];
-$ciudadevento="SELECT nombre FROM ciudad WHERE idciudad='$ciudad1'";
-		$ciudadrespuesta = $link->query($ciudadevento);
-		foreach($ciudadrespuesta as $rowciudadrespuesta){
-			$nombreciudadevento=$rowciudadrespuesta['nombre'];
-		}
-
-
-?>
-
-
-
-
+$ciudad1 = $_SESSION['idciudad'];
+$ciudadevento = "SELECT nombre FROM ciudad WHERE idciudad='$ciudad1'";
+$ciudadrespuesta = $link->query($ciudadevento);
+foreach ($ciudadrespuesta as $rowciudadrespuesta) {
+  $nombreciudadevento = $rowciudadrespuesta['nombre'];
+}

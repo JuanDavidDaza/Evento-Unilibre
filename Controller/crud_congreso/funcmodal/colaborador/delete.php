@@ -26,5 +26,3 @@
 	$database->close();
 
 	echo json_encode($output);
-
-?>

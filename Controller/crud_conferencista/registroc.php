@@ -5,7 +5,3 @@
 
 
 	require_once "../../../Views/funtion/crud_conferencista/registroc.php";
-
-
-	
-?>

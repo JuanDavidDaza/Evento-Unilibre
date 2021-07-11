@@ -1,5 +1,5 @@
 
 <?php
-  require_once "../../Model/cerrar-sesion.php";
-   
+require_once "../../Model/cerrar-sesion.php";
+
 ?>

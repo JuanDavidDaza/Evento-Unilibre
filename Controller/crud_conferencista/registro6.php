@@ -11,5 +11,3 @@
 $nombreevento=$row['nombreevento'];
 
 require_once "../../../Views/funtion/crud_conferencista/registro6.php";
-?>
-

@@ -36,4 +36,3 @@
 }
 
 require_once "../../../Views/funtion/crud_conferencista/registro5.php";
-?>

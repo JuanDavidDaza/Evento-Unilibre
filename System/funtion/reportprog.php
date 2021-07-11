@@ -1,3 +1,2 @@
 <?php
-  require('../../Controller/System/reportprog.php');
-?>
+require('../../Controller/System/reportprog.php');

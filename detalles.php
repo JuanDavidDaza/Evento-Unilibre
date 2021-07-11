@@ -1,8 +1,4 @@
 <?php
 
 
-  require('Controller/evento/detalles_code.php');
-
-  
-
-?>
+require('Controller/evento/detalles_code.php');

@@ -37,4 +37,3 @@
 	}
 
 	require('../../../Views/funtion/crud_asistencia/registro_asistente.php');
-?>  

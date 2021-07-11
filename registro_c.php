@@ -1,8 +1,4 @@
 <?php
 
 
-  require('Controller/evento/registro_c.php');
-
-  
-
-?>
+require('Controller/evento/registro_c.php');

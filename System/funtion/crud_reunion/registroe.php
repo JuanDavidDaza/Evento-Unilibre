@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_reunion/registroe.php');
-?>
+require('../../../Controller/crud_reunion/registroe.php');

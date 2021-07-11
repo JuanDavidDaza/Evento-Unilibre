@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/diagrama/reporte_code.php');
-?>
+require('../../../Controller/diagrama/reporte_code.php');

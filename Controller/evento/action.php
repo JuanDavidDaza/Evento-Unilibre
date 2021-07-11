@@ -2,12 +2,10 @@
 session_start();
 include '../../Model/eventofiltro.php';
 $eventofiltro = new eventofiltro();
-if(isset($_POST["action"])){
+if (isset($_POST["action"])) {
 	$html = $eventofiltro->searchEvento($_POST);
 	$data = array(
-		"html"	=> $html,	
+		"html"	=> $html,
 	);
-	echo json_encode($data);	
+	echo json_encode($data);
 }
-
-?>

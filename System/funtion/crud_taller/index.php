@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_taller/index.php');
-?>
+require('../../../Controller/crud_taller/index.php');

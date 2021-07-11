@@ -1,3 +1,2 @@
 <?php
-  require('../../Controller/admin_code/update.php');
-?>
+require('../../Controller/admin_code/update.php');

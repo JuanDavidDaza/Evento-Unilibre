@@ -1,3 +1,2 @@
 <?php
-  require('../../Controller/System/index.php');
-?>
+require('../../Controller/System/index.php');

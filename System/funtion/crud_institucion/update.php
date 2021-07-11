@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_institucion/update.php');
-?>
+require('../../../Controller/crud_institucion/update.php');

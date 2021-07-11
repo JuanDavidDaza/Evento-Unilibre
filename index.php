@@ -1,8 +1,4 @@
 <?php
 
 
-  require('Controller/evento/index_code.php');
-
-  
-
-?>
+require('Controller/evento/index_code.php');

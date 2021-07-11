@@ -182,10 +182,3 @@ $ciudadevento="SELECT nombre FROM ciudad WHERE idciudad='$ciudad1'";
  require('../../Views/funtion/vistas/parte_superior.php');
  require('../../Views/funtion/perfil.php');
  require('../../Views/funtion/vistas/parte_inferior.php');
-
-
-?>
-
-
-
-

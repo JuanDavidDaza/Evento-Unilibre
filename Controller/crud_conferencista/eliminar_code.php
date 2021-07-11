@@ -52,4 +52,3 @@
 	$resultado = $link->query($sql);
 	
 	require_once "../../../Views/funtion/crud_conferencista/eliminar.php";
-?>

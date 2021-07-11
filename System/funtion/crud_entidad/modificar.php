@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_entidad/modificar.php');
-?>
+require('../../../Controller/crud_entidad/modificar.php');

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +11,7 @@
 
   <title>Evento</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-  <link rel="shortcut icon"  href = "../../Content/favicon.ico" type="image/x-icon" > 
+  <link rel="shortcut icon" href="../../Content/favicon.ico" type="image/x-icon">
 
   <!-- Custom fonts for this template-->
   <link href="../../Views/public/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,15 +19,15 @@
 
   <!-- Custom styles for this template-->
   <link href="../../Views/public/css/sb-admin-2.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../Views/public/bootstrap/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="../../Views/public/js/jquery-ui.structure.css" type="text/css" media="all"/>
-  <link rel="stylesheet" href="../../Views/public/js/jquery-ui.theme.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="../../Views/public/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../Views/public/js/jquery-ui.structure.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../Views/public/js/jquery-ui.theme.css" type="text/css" media="all" />
   <script src="../../Views/public/js/jquery-ui.min.js"></script>
 
 
 
 
-    
+
 </head>
 
 <body id="page-top">
@@ -41,7 +40,7 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <img class="img-profile rounded-circle" src="../../Content/user2.png" width="50"> 
+        <img class="img-profile rounded-circle" src="../../Content/user2.png" width="50">
         <div class="sidebar-brand-text mx-3">Universidad Libre</div>
       </a>
 
@@ -90,7 +89,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-         
+
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -114,13 +113,13 @@
                 </form>
               </div>
             </li>
-           
+
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION["usuario"];?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION["usuario"]; ?></span>
 
-                <img class="img-profile rounded-circle" src="../../Content/user/<?php echo $_SESSION["foto"];?>">
+                <img class="img-profile rounded-circle" src="../../Content/user/<?php echo $_SESSION["foto"]; ?>">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -139,24 +138,24 @@
           </ul>
 
         </nav>
-<div class="modal fade" id="sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">No hay actividad reciente</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Su sesión está a punto de caducar. En 2 minutos se cerrará la sesión
-        <div id="timer"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info" data-dismiss="modal">Aceptar</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="modal fade" id="sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">No hay actividad reciente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Su sesión está a punto de caducar. En 2 minutos se cerrará la sesión
+                <div id="timer"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Aceptar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- End of Topbar -->

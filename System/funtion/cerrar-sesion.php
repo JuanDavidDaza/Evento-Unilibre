@@ -1,6 +1,3 @@
-
 <?php
 
-  require('../../Controller/System/cerrar-sesion.php');
-  
-?>
+require('../../Controller/System/cerrar-sesion.php');

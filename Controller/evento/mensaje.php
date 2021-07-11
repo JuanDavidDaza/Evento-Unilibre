@@ -1,12 +1,12 @@
 <?php
-	
 
 
-	$output = array('error' => false);
 
-	
-	try{
-		$output['message'] = '<div class="modal" id="cargando" tabindex="-1"  aria-hidden="false">
+$output = array('error' => false);
+
+
+try {
+	$output['message'] = '<div class="modal" id="cargando" tabindex="-1"  aria-hidden="false">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body" style="text-align: center;">
@@ -16,14 +16,11 @@
                 </div>
               </div>
             </div>';
-	}
-	catch(PDOException $e){
-		$output['error'] = true;
-		$output['message'] = $e->getMessage();;
-	}
+} catch (PDOException $e) {
+	$output['error'] = true;
+	$output['message'] = $e->getMessage();;
+}
 
-	//cerrar conexión
+//cerrar conexión
 
-	echo json_encode($output);
-
-?>
+echo json_encode($output);

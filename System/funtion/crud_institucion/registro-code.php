@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/crud_institucion/registro-code.php');
-?>
+require('../../../Controller/crud_institucion/registro-code.php');

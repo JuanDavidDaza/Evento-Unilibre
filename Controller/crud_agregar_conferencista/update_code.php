@@ -125,6 +125,3 @@
 
 		   
  require('../../../Views/funtion/crud_agregar_conferencista/update.php');
-                 
-?>
-

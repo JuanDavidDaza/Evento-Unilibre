@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/diagrama/imprimir.php');
-?>
+require('../../../Controller/diagrama/imprimir.php');

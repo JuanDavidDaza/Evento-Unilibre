@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/registro/mostrar.php');
-?>
+require('../../../Controller/registro/mostrar.php');

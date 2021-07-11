@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/registro/edicion.php');
-?>
+require('../../../Controller/registro/edicion.php');

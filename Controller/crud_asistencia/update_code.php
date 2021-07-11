@@ -33,5 +33,3 @@
 
 	
 require('../../../Views/funtion/crud_asistencia/update.php');
-	
-?>

@@ -20,6 +20,3 @@
 	$resultado = $link->query($sql);
 
 	require('../../../Views/funtion/crud_agregar_conferencista/eliminar.php');
-
-	
-?>

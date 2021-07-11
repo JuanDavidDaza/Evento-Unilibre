@@ -206,4 +206,3 @@
 		
 	}
 require_once "../../../Views/funtion/crud_conferencista/imagen.php";
-?>

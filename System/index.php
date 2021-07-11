@@ -1,3 +1,2 @@
 <?php
-  require('../Controller/System/code_login.php');
-?>
+require('../Controller/System/code_login.php');

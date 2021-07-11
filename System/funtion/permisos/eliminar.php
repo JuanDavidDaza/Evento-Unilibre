@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/permisos/eliminar.php');
-?>
+require('../../../Controller/permisos/eliminar.php');

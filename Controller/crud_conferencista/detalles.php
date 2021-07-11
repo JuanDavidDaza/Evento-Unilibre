@@ -49,5 +49,3 @@ else{
 }	
 
 require_once "../../../Views/funtion/crud_conferencista/detalles.php";
-
-?>

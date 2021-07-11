@@ -14,4 +14,3 @@
 	$resultado1 = $link->query($sql1);
 	$row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
 require_once "../../../Views/funtion/crud_conferencista/registro2.php";
-?>

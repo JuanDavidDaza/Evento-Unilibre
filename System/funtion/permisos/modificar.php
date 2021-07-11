@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/permisos/modificar.php');
-?>
+require('../../../Controller/permisos/modificar.php');

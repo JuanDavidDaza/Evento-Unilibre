@@ -1,3 +1,2 @@
 <?php
-  require('../../../Controller/permisos/registroe.php');
-?>
+require('../../../Controller/permisos/registroe.php');

@@ -1,43 +1,40 @@
-
-  @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-  *{
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+* {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
 }
 
-body{
-  background: linear-gradient(90deg, #EC452E, #EC452E);
+body {
+  background: linear-gradient(90deg, #ec452e, #ec452e);
   padding: 20px;
-
 }
 
-  .error {
-    color: red;
-    font-size: 90%;
+.error {
+  color: red;
+  font-size: 90%;
 }
-input[type="submit"]{
+input[type="submit"] {
   width: 100%;
   height: 50px;
   margin-top: 60px;
   color: white;
-  border:0px;
-  background: linear-gradient(90deg, #BF4222, #E30F87);
+  border: 0px;
+  background: linear-gradient(90deg, #bf4222, #e30f87);
   font-weight: 300;
   cursor: pointer;
-  font-size:18px;
+  font-size: 18px;
 }
 
-input[type="submit"]:hover{
-  background: linear-gradient(90deg,#E30F87,#BF4222);
-  
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #e30f87, #bf4222);
 }
 .row {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
-.container-all{
+.container-all {
   width: 100%;
   max-width: 1000px;
   margin: auto;
@@ -45,29 +42,26 @@ input[type="submit"]:hover{
   display: flex;
   border-radius: 20px;
   overflow: hidden;
-
 }
-.ctn-form{
+.ctn-form {
   width: 80%;
   padding: 40px;
   background: #f7f7f7;
-
 }
 
-.logo{
+.logo {
   width: 150px;
   display: block;
   margin: auto;
 }
 
-.title{
+.title {
   text-align: center;
   margin-top: 20px;
-  font-weight:300;
+  font-weight: 300;
   color: #7a7a7a;
-
 }
-label{
+label {
   display: block;
   margin-top: 30px;
   font-size: 20px;
@@ -75,34 +69,33 @@ label{
   color: #7a7a7a;
 }
 
-.text-footer{
+.text-footer {
   display: block;
   margin-top: 100;
   text-align: center;
   color: #7a7a7a;
   font-weight: 300;
-
 }
-.text-footer a{
-  color: #029EE1;
+.text-footer a {
+  color: #029ee1;
   font-weight: 500;
 }
 
 .form-inline {
-    border: 1px solid #ccc;
-    padding: 8px 10px 4px;
-    border-radius: 2px;
+  border: 1px solid #ccc;
+  padding: 8px 10px 4px;
+  border-radius: 2px;
 }
-.form-inline label, .form-inline input {
-    display: inline-block;
-    width: auto;
-    padding-right: 15px;
+.form-inline label,
+.form-inline input {
+  display: inline-block;
+  width: auto;
+  padding-right: 15px;
 }
-
 
 /* Lado Derecho donde esta las letras */
 
-.ctn-text{
+.ctn-text {
   width: 100%;
 
   background-position: center;
@@ -110,60 +103,55 @@ label{
   padding: 40px;
   position: relative;
 }
-.capa{
+.capa {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background:  #000000; /*aqui*/
+  background: #000000; /*aqui*/
   opacity: 0.9;
-
 }
-.title-description{
+.title-description {
   position: relative;
   top: 80px;
   color: white;
   font-weight: 300;
   font-size: 40px;
 }
-.title-description2{
+.title-description2 {
   position: relative;
   top: 50px;
   color: white;
   font-weight: 300;
   font-size: 30px;
 }
-.text-description{
+.text-description {
   position: relative;
   top: 110px;
-  color:white;
+  color: white;
   font-size: 18px;
   font-weight: 200;
 }
 /* _____________cuando llegue determinado tamaño se adacte ______ */
 
-
-@media screen and (max-width: 800px){
-  .ctn-text{
-    display:none;
+@media screen and (max-width: 800px) {
+  .ctn-text {
+    display: none;
   }
-  .ctn-form{
-    margin:auto;
+  .ctn-form {
+    margin: auto;
     width: 100%;
     background: white;
-
-
   }
 }
-@media screen and (max-width: 500px){
-  .title-welcome{ 
+@media screen and (max-width: 500px) {
+  .title-welcome {
     font-weight: 400;
     font-size: 30px;
     margin-top: 20px;
-}
-
+  }
 }
 .select2 {
-width:100%!important;
+  width: 100% !important;
 }

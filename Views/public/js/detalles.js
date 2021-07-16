@@ -1,15 +1,1 @@
-$(document).ready(function () {
-  idtipoeve = $("#idtipoeve").val();
-
-  if (idtipoeve == 1) {
-    document.getElementById("conferencista").style.display = "none";
-  } else if (idtipoeve == 2) {
-    document.getElementById("conferencista").style.display = "block";
-  } else if (idtipoeve == 3) {
-    document.getElementById("conferencista").style.display = "none";
-  } else if (idtipoeve == 4) {
-    document.getElementById("conferencista").style.display = "block";
-  } else if (idtipoeve == 5) {
-    document.getElementById("conferencista").style.display = "none";
-  }
-});
+$(document).ready(function(){idtipoeve=$("#idtipoeve").val(),1==idtipoeve?document.getElementById("conferencista").style.display="none":2==idtipoeve?document.getElementById("conferencista").style.display="block":3==idtipoeve?document.getElementById("conferencista").style.display="none":4==idtipoeve?document.getElementById("conferencista").style.display="block":5==idtipoeve&&(document.getElementById("conferencista").style.display="none")});

@@ -148,8 +148,7 @@ path {
   border-radius: 12px;
   height: 214px;
 }
-h1 {
-}
+
 h1 strong {
   font-weight: 900;
 }
@@ -159,7 +158,8 @@ h2 {
   font-size: 36px;
   font-weight: 300;
   margin-bottom: 20px;
-  color: #666;
+  color: rgb(22, 15, 15);
+  font-weight: 900;
 }
 h3 {
   font-size: 16px;
@@ -598,9 +598,7 @@ img.team-img {
 /*Font Loded*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 
-body {
-  background: url(../../../Content/bg.jpg);
-}
+git
 /* Mostrar los eventos */
 
 .btn-custom2 {

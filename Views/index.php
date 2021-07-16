@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="Views/public/fonts/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="Views/public/css/style.css">
-  <link rel="stylesheet" type="text/css" href="Views/public/css/img.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -68,7 +67,7 @@
   <!-- About Section -->
   <div id="about-section">
     <div class="container" data-aos="fade-up">
-      <h1 class="display-5"><strong>Acerca de</strong></h1>
+      <h2 class="display-5"><strong>Acerca de</strong></h2>
       <hr>
       <br>
     </div>
@@ -87,7 +86,7 @@
   </div>
   <div id="Calendario">
     <div class="container" data-aos="fade-down">
-      <h1 class="display-5"><strong>Agenda</strong></h1>
+      <h2 class="display-5"><strong>Agenda</strong></h2>
       <hr>
       <br>
       <div id="calendar"></div>
@@ -100,7 +99,7 @@
       <div class="row jumbotron eventofiltro" style="justify-content: center; ">
         <div div class="col-xl-7" id="Eventos_Activos">
           <img src="Content/logopequeño.png" width="150"><br><br>
-          <h1><strong>Eventos disponibles</strong></h1>
+          <h2><strong>Eventos disponibles</strong></h2>
           <div class="search">
             <input type="text" class="search-input " placeholder="Buscar eventos o categorias" id="buscar" name="buscar" onkeyup="buscar_ajax(this.value);"> <a class="search-icon"> <i class="fa fa-search"></i> </a>
           </div>

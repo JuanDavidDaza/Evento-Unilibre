@@ -24,8 +24,8 @@
 				<h2></strong><span class="badge badge-primary"><?php echo  $row['nombretipo']; ?></span> | <span class="badge badge-danger"><?php echo $row['estado']; ?></span></h2><br>
 				<h3>URL DE INSCRIPCIÓN</h3>
 				<div class="row">
-					<div class="col-xl-11"><input class="text-center" type="url" name="" style="width: 100%;" disabled="disabled" value="EventoUnilibre/registro.php?idevento=<?php echo $idevento; ?>"><br></div>
-					<div class="col-xl-1"><a href="http://localhost/EventoUnilibre/registro.php?idevento=<?php echo $idevento; ?>" class="btn btn-info" target="_blank" style="width: 100%;">Ir</a></div>
+					<div class="col-xl-11"><input class="text-center" type="url" name="" style="width: 100%;" disabled="disabled" value="http://eventos.unilibre.edu.co/registro.php?idevento=<?php echo $idevento; ?>"><br></div>
+					<div class="col-xl-1"><a href="http://eventos.unilibre.edu.co/registro.php?idevento=<?php echo $idevento; ?>" class="btn btn-info" target="_blank" style="width: 100%;">Ir</a></div>
 				</div>
 				<br><a href="index.php" class="btn btn-info">&larr; Regresar</a>
 			</div>

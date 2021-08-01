@@ -55,7 +55,7 @@ foreach ($resp as $rowevento) {
 	$fecha2 = date("Y-m-d", strtotime($fecha1 . "+ 1 days"));
 	//echo $fecha2. ', ';
 
-	$datos[$n1] = '{ id:"' . $rowevento['idevento'] . '", name:"' . $rowevento['nombretipo'] . '", badge: "Activo", description:  "' . $rowevento['nombreevento'] . ' <br><strong>Ciudad: ' . $rowevento['Ciudad'] . '</strong> <a href=http://localhost/EventoUnilibre/detalles.php?idevento=' . $rowevento['idevento'] . '>- Ver Detalles</a>  ", date:"' . $fecha2 . '" ,  time: null, type: "event"},';
+	$datos[$n1] = '{ id:"' . $rowevento['idevento'] . '", name:"' . $rowevento['nombretipo'] . '", badge: "Activo", description:  "' . $rowevento['nombreevento'] . ' <br><strong>Ciudad: ' . $rowevento['Ciudad'] . '</strong> <a href=http://eventos.unilibre.edu.co/detalles.php?idevento=' . $rowevento['idevento'] . '>- Ver Detalles</a>  ", date:"' . $fecha2 . '" ,  time: null, type: "event"},';
 
 	$n1 = $n1 + 1;
 }

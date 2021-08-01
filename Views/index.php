@@ -8,10 +8,8 @@
   <link rel="stylesheet" type="text/css" href="Views/public/css/evo-calendar.css" />
   <link rel="stylesheet" type="text/css" href="Views/public/css/evo-calendar.orange-coral.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+ 
   <title>Registro de Eventos || Universidad Libre Secciona Cali</title>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="Views/public/fonts/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="Views/public/css/style.css">

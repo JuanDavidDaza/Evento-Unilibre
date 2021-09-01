@@ -21,4 +21,7 @@ $id1 = $_SESSION['rol_id'];
 
 
 //echo $clave;
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/permisos/modificar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

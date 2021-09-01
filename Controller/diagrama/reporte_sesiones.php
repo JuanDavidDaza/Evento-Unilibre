@@ -45,4 +45,6 @@ $fechaActual = date('d-m-Y');
 
 
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/reporte_sesion.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

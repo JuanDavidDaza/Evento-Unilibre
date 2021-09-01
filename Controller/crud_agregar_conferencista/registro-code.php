@@ -1,6 +1,7 @@
   <?php
 	require_once "../../../Model/session_admin2.php";
 	require_once "../../../Model/BD.php";
+
 	$BD = new basedatos();
 
 	$txtFoto = (isset($_FILES['txtFoto']["name"])) ? $_FILES['txtFoto']["name"] : "";
@@ -55,5 +56,6 @@
 
 
 
-
+	require_once "../../../Views/funtion/vistas/crud/ps.php";
 	require('../../../Views/funtion/crud_agregar_conferencista/registro-code.php');
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

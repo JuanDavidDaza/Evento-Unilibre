@@ -6,4 +6,8 @@ require_once "../../../Model/BD.php";
 $idprograma = $_GET['idprograma'];
 $sql = "DELETE FROM programas WHERE idprograma = '$idprograma'";
 $resultado = $link->query($sql);
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_programas/eliminar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

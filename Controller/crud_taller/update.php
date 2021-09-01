@@ -13,4 +13,9 @@ $idciudad = (isset($_POST['idciudad'])) ? $_POST['idciudad'] : "";
 $sql = "UPDATE evento SET nombreevento='$nombreevento', certificado='$certificado', generalinfo='$generalinfo', tematica='$tematica', responsable='$responsable', estado='$estado', idciudad='$idciudad' WHERE idevento = '$idevento'";
 $resultado = $link->query($sql);
 
+
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_taller/update.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

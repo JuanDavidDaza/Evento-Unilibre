@@ -16,4 +16,7 @@ if ($idinstitucion == 0 || $idinstitucion == 1 || $idinstitucion == 2 || $idinst
 
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_institucion/eliminar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

@@ -28,4 +28,6 @@ if (isset($_GET['cedula']) || ($_GET['cedula'] = "")) {
 
 
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/diagrama2.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

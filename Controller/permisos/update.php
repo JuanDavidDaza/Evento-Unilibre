@@ -107,4 +107,7 @@ if ($email == $email2) {
   }
 }
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/permisos/update.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

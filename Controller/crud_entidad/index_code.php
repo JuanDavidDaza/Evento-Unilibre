@@ -14,4 +14,8 @@ if ($idciudad != '0') {
 	$sql = "SELECT entidad.identidad, entidad.nombreentidad,ciudad.nombre FROM entidad INNER JOIN ciudad on ciudad.idciudad = entidad.idciudad";
 	$resultado = $link->query($sql);
 }
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_entidad/index.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

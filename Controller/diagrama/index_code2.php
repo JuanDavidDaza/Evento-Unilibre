@@ -27,4 +27,7 @@ if ($idciudad != '0') {
 	$resultado = $link->query($sql);
 }
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/diagrama/index2.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

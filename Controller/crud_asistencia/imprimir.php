@@ -13,5 +13,6 @@ if ($rol_id == 4 || $rol_id == 1) {
 	$sql = "SELECT * FROM evento_usuario INNER JOIN evento ON evento.idevento=evento_usuario.idevento INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE idusuario = '$id' and estado= 'Activo'";
 	$resultado = $link->query($sql);
 }
-
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require('../../../Views/funtion/crud_asistencia/imprimir.php');
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

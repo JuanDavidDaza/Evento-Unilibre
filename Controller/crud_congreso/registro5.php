@@ -34,4 +34,6 @@ if (isset($_GET['delete_id'])) {
 	//header("Location: '$enlace'");
 }
 
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_congreso/registro5.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

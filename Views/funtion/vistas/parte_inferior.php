@@ -44,8 +44,10 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../../Views/public/js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../Views/public/js/jquery-ui.min.js"></script>
 <script src="../../Views/public/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
 <!-- Custom scripts for all pages-->
 <script src="../../Views/public/js/sb-admin-2.min.js"></script>
@@ -66,3 +68,5 @@
 </body>
 
 </html>
+
+

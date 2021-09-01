@@ -15,4 +15,8 @@
   $cboidciudad = $BD->ListaValores('idciudad', 'ciudad', 'idciudad', 'ciudad.nombre');
 
 
+
+
+  require_once "../../../Views/funtion/vistas/crud/ps.php";
   require_once "../../../Views/funtion/crud_congreso/registro.php";
+  require_once "../../../Views/funtion/vistas/crud/pi.php";

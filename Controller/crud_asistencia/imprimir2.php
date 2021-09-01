@@ -20,4 +20,6 @@ $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
 
 $fechaActual = date('d-m-Y');
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require('../../../Views/funtion/crud_asistencia/imprimir2.php');
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

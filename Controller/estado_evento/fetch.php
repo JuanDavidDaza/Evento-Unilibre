@@ -50,7 +50,7 @@ $output = '
 <label>Total Registros - ' . $total_data . '</label>
 <table class="table table-striped table-bordered text-center">
    <thead>
-   <tr style="background-color: gray;
+   <tr class="font-weight-bold" style="background-color: gray;
   color: white;">
 
           <td class="text-center">Nombre del Evento</td>
@@ -89,7 +89,7 @@ if ($total_data > 0) {
      <tr>
                 <td  rowspan="' . $sesiones1 . '">
                     <p><strong>' . $row['nombreevento'] . '</strong> || ' . $row['nombretipo'] . '</strong></p>
-                      <p>Estado: <span class="label label-' . $tipo . '">' . $row['estado'] . '</span> || 
+                      <p>Estado: <span class="badge badge-' . $tipo . '">' . $row['estado'] . '</span> || 
 
                       <button type="button" name="action" class="button  btn-xs action " data-user_id="' . $row["idevento"] . '" data-user_status="' . $estado . '">Cambio de estado</button></p>
                     </td>
@@ -99,9 +99,9 @@ if ($total_data > 0) {
      <tr>
                 <td  rowspan="">
                     <p><strong>' . $row['nombreevento'] . '</strong> || ' . $row['nombretipo'] . '</strong></p>
-                      <p>Estado: <span class="label label-' . $tipo . '">' . $row['estado'] . '</span> || 
+                      <p>Estado: <span class="badge badge-' . $tipo . '">' . $row['estado'] . '</span> || 
 
-                      <button type="button" name="action" class="button  btn-xs action " data-user_id="' . $row["idevento"] . '" data-user_status="' . $estado . '">Cambio de estado</button></p>
+                      <button type="button" name="action" class="button btn-dark action " data-user_id="' . $row["idevento"] . '" data-user_status="' . $estado . '">Cambio de estado</button></p>
                     </td>
     ';
     }
@@ -115,9 +115,9 @@ if ($total_data > 0) {
     foreach ($resultado_eve2 as $row113) {
       $fecha_entrada = strtotime("" . $row113['fechafin'] . "");
       if ($fecha_actual > $fecha_entrada) {
-        $estado_fecha = '<span class="label label-warning"> Finalizado</span>';
+        $estado_fecha = '<span class="badge badge-warning"> Finalizado</span>';
       } else {
-        $estado_fecha = '<span class="label label-success"> Activo</span>';
+        $estado_fecha = '<span class="badge badge-success"> Activo</span>';
       }
 
       if ($sesiones != 1) {

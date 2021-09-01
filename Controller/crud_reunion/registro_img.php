@@ -168,4 +168,8 @@ if (isset($_POST['btnsave'])) {
 		}
 	}
 }
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_reunion/imagen.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

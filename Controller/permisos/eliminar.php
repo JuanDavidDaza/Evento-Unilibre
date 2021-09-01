@@ -18,6 +18,6 @@ $sql1 = "DELETE FROM evento_usuario WHERE idusuario = '$id'";
 $resultado1 = $link->query($sql1);
 
 
-
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/permisos/eliminar.php";
-?>	
+require_once "../../../Views/funtion/vistas/crud/pi.php";

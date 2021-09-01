@@ -7,19 +7,21 @@ $BD = new basedatos();
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	if (isset($_GET['idevento'])) {
 		$idevento1 = $_GET['idevento'];
-
-
 		$sql = "SELECT * FROM evento WHERE idevento = '$idevento1'";
 		$resultado = $link->query($sql);
 		$row = $resultado->fetch_array(MYSQLI_ASSOC);
 
-
 		$tipoevento = $row['idtipoeve'];
+		$registro = $row['registro'];
+
+		if ($tipoevento === "7" || $registro === 'No') {
+			echo "<script> alert('Este Evento no permite inscripción') </script>";
+			header("index.php");
+			die();
+		}
 		$estado = $row['estado'];
 		$idciudad = $row['idciudad'];
 
-		$connect = new PDO("mysql:host=localhost;dbname=evento", "root", "");
-		$connect->exec("set names utf8");
 		function box2($connect, $idciudad)
 		{
 			$output = '';
@@ -37,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 		if ($estado != "Activo") {
 			echo "<script> alert('Este Evento no se encuentra Activo, por favor ingrese mas tarde') </script>";
-			header("refresh:1;index.php");
+			header("index.php");
 			die();
 		}
 

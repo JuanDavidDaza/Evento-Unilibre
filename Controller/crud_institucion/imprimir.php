@@ -6,4 +6,7 @@ $idciudad = $_SESSION['idciudad'];
 $sql = "SELECT institucion_educativa.idinstitucion,institucion_educativa.nombre,institucion_educativa.telefono,institucion_educativa.direccion,ciudad.nombre AS nombreciudad FROM institucion_educativa  INNER JOIN ciudad ON ciudad.idciudad = institucion_educativa.idciudad  WHERE institucion_educativa.idciudad='$idciudad'";
 $resultado = $link->query($sql);
 
+
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/crud_institucion/imprimir.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

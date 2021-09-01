@@ -34,7 +34,7 @@ class eventofiltro
 		}
 		return $data;
 	}
-	private function getNumRows($sqlQuery)
+	private function getNumRows($sqlQuery, $conn)
 	{
 		$result = mysqli_query($this->dbConnect, $sqlQuery);
 		if (!$result) {
@@ -46,7 +46,7 @@ class eventofiltro
 	public function getBrand()
 	{
 		$sqlQuery = "
-			SELECT DISTINCT nombretipo FROM evento_tipo";
+		SELECT DISTINCT nombretipo, idtipoeve FROM evento_tipo WHERE idtipoeve != 7 ";
 		return  $this->getData($sqlQuery);
 	}/*
 	public function getStorage(){
@@ -81,7 +81,7 @@ class eventofiltro
 		$sqlQuery = "SELECT 
 		idevento,evento_tipo.nombretipo,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo, evento_tipo.idtipoeve 
 
-		FROM " . $this->Table . " INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'";
+		FROM " . $this->Table . " INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'  AND evento_tipo.idtipoeve != 7";
 
 
 		if (isset($_POST["buscar"]) && !empty($_POST["buscar"])) {

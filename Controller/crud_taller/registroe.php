@@ -18,9 +18,9 @@
 	$responsable = (isset($_POST['responsable'])) ? $_POST['responsable'] : "";
 
 
-	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad'];
+	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad','O_tipo','registro'];
 
-	$valores = [$nombreevento, 3, $certificado, $generalinfo, $tematica, $responsable, 'Activo', $idciudad];
+	$valores = [$nombreevento, 3, $certificado, $generalinfo, $tematica, $responsable, 'Activo', $idciudad,'',''];
 
 	if ($BD->AdicionarRegistro('evento', $campos, $valores)) {
 		//echo "<script> alert('Registro Exitoso') </script>";
@@ -45,4 +45,6 @@
 			']';
 	}
 
+	require_once "../../../Views/funtion/vistas/crud/ps.php";
 	require_once "../../../Views/funtion/crud_taller/registroe.php";
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

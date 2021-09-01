@@ -3,15 +3,10 @@
 
 <head>
     <title>Inscripción al Evento <?php echo $row['nombreevento']; ?></title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./Views/public/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./Views/public/css/estilosfor.css">
     <link rel="shortcut icon" href="./Content/favicon.ico" type="image/x-icon">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -21,11 +16,7 @@
             width: 100% !important;
         }
     </style>
-
-
     <link rel="stylesheet" type="text/css" href="./Views/public/css/select2.css">
-
-
 </head>
 
 <body>
@@ -97,7 +88,8 @@
                     <div class="error" id="cualErr"></div>
                 </div>
                 <br>
-                <div class="g-recaptcha" data-sitekey="6LdFdckaAAAAACwrthiqcaeCETBHyJ8-Z6tfdJT2"></div>
+
+                <div class="g-recaptcha" data-sitekey="6LcCeA0cAAAAACMbVyq4BCVn96gO36N3vr2eE6xn"></div>
                 <div class="error" id="recaptchaErr"></div>
                 <input class="" type="submit" id="submit" value="Registrarse">
             </form>
@@ -105,7 +97,7 @@
         </div>
         <div class="ctn-text">
             <div class="capa"></div>
-            <h1 class="title-description2 page-header text-center" align="center">Universidad Libre</h1>
+            <h1 class="title-description2 page-header text-center">Universidad Libre</h1>
             <h1 class="title-description text-center page-header "><strong><?php echo $row['nombreevento']; ?></strong></h1>
             <p class="text-description" style="text-align: justify;"><?php echo  $row['generalinfo']; ?></p><br>
             <?php echo $d; ?>
@@ -128,16 +120,16 @@
 
 
 </html>
+<script>
 
-
-<link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-
-<script src="./Views/public/js/validacion.js"></script>
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="./Views/public/js/validacion.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./Views/public/js/select2.js"></script>
 <script type="text/javascript" src="./Views/public/js/registrop.js"></script>

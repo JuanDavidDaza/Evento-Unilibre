@@ -10,4 +10,8 @@ $resultado = $link->query($sql);
 $row = $resultado->fetch_array(MYSQLI_ASSOC);
 $nombreevento = $row['nombreevento'];
 
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_congreso/modificar6.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

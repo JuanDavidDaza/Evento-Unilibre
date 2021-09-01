@@ -53,4 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_institucion/update.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

@@ -3,16 +3,11 @@
 require_once "../../../Model/BD.php";
 require_once "../../../Model/session_admin3.php";
 
+
 $idevento = $_GET['idevento'];
 $idevento1 = $_GET['idevento'];
 $idasistente = $_GET['idasistente'];
 $id = $_GET['id'];
-/*
-	$id=$_SESSION['id'];
-	if ($id==2) {
-
-
-	}*/
 
 $sql = "SELECT * FROM pre_inscripcion WHERE idevento = '$idevento' and idasistente='$idasistente'";
 $resultado = $link->query($sql);
@@ -54,5 +49,6 @@ function institucion_educativap($connect, $idciudad, $valor)
 	return $output;
 }
 
-
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require('../../../Views/funtion/crud_asistencia/detallesinscritos.php');
+require_once "../../../Views/funtion/vistas/crud/pi.php";

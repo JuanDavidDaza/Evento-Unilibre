@@ -77,9 +77,9 @@ if ($idciudad != '0') {
 
 
 
-} else {
-	//
 }
 
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/imprimir.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

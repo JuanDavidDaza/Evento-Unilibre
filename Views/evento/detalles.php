@@ -55,13 +55,9 @@
                 <h4><strong>Descripción</strong></h4>
                 <p class="lead" style="text-align: justify;"><?php echo $row['generalinfo']; ?></p>
                 <hr class="my-4">
-
-                <h4><strong>¿Realiza Certificado?</strong> : <?php echo $row['certificado']; ?></h4>
                 <h4><strong>Responsable</strong> : <?php echo $row['responsable']; ?></h4>
                 <h4><strong>Ciudad</strong> : <span class="badge badge-danger"><?php echo $ciudad; ?></span></h4>
                 <hr class="my-4">
-
-
             </div>
         </div>
     </div>
@@ -126,13 +122,15 @@
 
 
     <div id="contenido_color" data-aos="fade-up">
-        <div class="galeria row text-center" id="galley">
+        <div class="galeria  text-center" id="galley">
 
-            <ul class="pictures">
-                <?php while ($rowimagen = $resultadoimg->fetch_array(MYSQLI_ASSOC)) { ?>
+
+            <?php while ($rowimagen = $resultadoimg->fetch_array(MYSQLI_ASSOC)) { ?>
+                <ul class="pictures">
                     <li><img data-original="./Content/evento_foto/<?php echo $rowimagen['foto'] ?>" width="400" height="310" src="./Content/evento_foto/<?php echo $rowimagen['foto'] ?>" alt="<?php echo $rowimagen['nombre']; ?>   <?php echo $rowimagen['detalles']; ?> "></li>
-                <?php } ?>
-            </ul>
+                </ul>
+            <?php } ?>
+
         </div>
         <div class="container">
             <div class="text-center ">
@@ -162,23 +160,27 @@
 
         </div>
 
+        <?php if ($row['registro'] === "Si") { ?>
+            <div id="boton">
+                <div class="text-center container">
+                    <a class="btn btn-success btn-lg" href="./registro.php?idevento=<?php echo $row['idevento']; ?>" role="button">Inscripción</a>
 
-        <div id="boton">
-            <div class="text-center container">
-                <a class="btn btn-success btn-lg" href="./registro.php?idevento=<?php echo $row['idevento']; ?>" role="button">Inscripción</a>
-
+                </div>
             </div>
-        </div>
+        <?php } ?>
+
     </div>
 
     <div id="footer">
         <div class="container text-center">
-            <p>Copyright &copy; 2020 <a href="http://www.unilibrecali.edu.co" rel="nofollow">Universidad Libre Seccional Cali</a></p>
+            <p>Copyright &copy; 2021 <a href="http://www.unilibrecali.edu.co" rel="nofollow">Universidad Libre Seccional Cali</a></p>
         </div>
     </div>
 </body>
 
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
@@ -189,7 +191,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="./Views/public/js/main.js"></script>
 <script type="text/javascript" src="./Views/public/js/detalles.js"></script>
 <script src="./Views/public/js/viewer.js"></script>

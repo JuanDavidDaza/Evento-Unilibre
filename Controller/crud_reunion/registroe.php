@@ -31,9 +31,9 @@
 	$fechainicio = (isset($_POST['fechainicio'])) ? $_POST['fechainicio'] : "";
 	//$fechafin=(isset($_POST['fechafin']))?$_POST['fechafin']:"";
 
-	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad'];
+	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad','O_tipo','registro'];
 
-	$valores = [$nombreevento, $idtipoeve, 'No', $generalinfo, $tematica, $responsable, 'Activo', $idciudad];
+	$valores = [$nombreevento, $idtipoeve, 'No', $generalinfo, $tematica, $responsable, 'Activo', $idciudad,'',''];
 
 	if ($BD->AdicionarRegistro('evento', $campos, $valores)) {
 
@@ -69,7 +69,7 @@
 	$resultadoid = $link->query($traerid);
 	$rowid = $resultadoid->fetch_array(MYSQLI_ASSOC);
 	$idevento = $rowid['idevento'];
-	echo $idevento;
+
 
 	$campos1 = ['idevento', 'nombresesion', 'audsalon', 'horainicio', 'horafin', 'fechainicio', 'fechafin', 'posicion'];
 
@@ -95,4 +95,6 @@
 	}
 
 
+	require_once "../../../Views/funtion/vistas/crud/ps.php";
 	require_once "../../../Views/funtion/crud_reunion/registroe.php";
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

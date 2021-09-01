@@ -15,4 +15,7 @@ if ($idciudad != '0') {
 }
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_taller/index.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

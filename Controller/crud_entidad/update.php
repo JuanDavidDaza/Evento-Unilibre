@@ -94,4 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$resultado = $link->query($sql);
 		}*/
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_entidad/update.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

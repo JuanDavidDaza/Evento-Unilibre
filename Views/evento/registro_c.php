@@ -11,8 +11,8 @@
 
 <body>
 	<div class="container">
-		<div class="jumbotron">
-			<div class="container text-center">
+		<div class="jumbotron card">
+			<div class=" text-center">
 				<img src="./Content/logopequeño.png" width="150" class="logo">
 				<?php if (empty($idasistente_err)) { ?>
 					<h3>SE REGISTRÓ CORRECTAMENTE A ESTE EVENTO</h3>

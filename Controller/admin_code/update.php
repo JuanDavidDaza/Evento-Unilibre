@@ -39,6 +39,7 @@ if ($rol_id == 1 || $rol_id == 4) {
             <a class='collapse-item' href='crud_reunion/index.php'>Reunión</a>
             <a class='collapse-item' href='crud_congreso/index.php'>Congreso</a>
             <a class='collapse-item' href='crud_conferencista/index.php'>Conferencia</a>  
+            <a class='collapse-item' href='crud_otro/index.php'>Otro</a>  
             <a class='collapse-item' href='estado_evento/index.php'>Gestión de Estado</a>    
           </div>
         </div>

@@ -26,4 +26,6 @@ if (isset($_GET['entidad']) || ($_GET['entidad'] = "")) {
 	header('location: index.php');
 }
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/diagrama4.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

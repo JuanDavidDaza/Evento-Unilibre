@@ -14,4 +14,8 @@ if ($idciudad != '0') {
 	$sql = "SELECT programas.idprograma, programas.nombreprograma,ciudad.nombre FROM programas INNER JOIN ciudad on ciudad.idciudad = programas.idciudad";
 	$resultado = $link->query($sql);
 }
+
+
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/crud_programas/imprimir.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

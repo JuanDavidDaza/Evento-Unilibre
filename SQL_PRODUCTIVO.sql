@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 16-07-2021 a las 18:33:53
+-- Tiempo de generación: 01-09-2021 a las 23:03:17
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `evento`
 --
-CREATE DATABASE IF NOT EXISTS `evento` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci;
-USE `evento`;
 
 -- --------------------------------------------------------
 
@@ -128,12 +126,14 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `responsable` varchar(100) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Responsable',
   `estado` varchar(15) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Estado del Evento',
   `idciudad` int(3) DEFAULT NULL COMMENT 'Codigo de la Ciudad',
+  `O_tipo` varchar(50) NOT NULL,
+  `registro` varchar(30) NOT NULL,
   PRIMARY KEY (`idevento`),
   KEY `certificado` (`certificado`),
   KEY `asdsss` (`estado`),
   KEY `tipoeve123` (`idtipoeve`),
   KEY `123asd` (`idciudad`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `evento_sesion` (
   PRIMARY KEY (`id`,`idevento`),
   KEY `id` (`id`),
   KEY `evento_sesion` (`idevento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -247,7 +247,9 @@ INSERT INTO `evento_tipo` (`idtipoeve`, `nombretipo`) VALUES
 (2, 'Conferencia'),
 (3, 'Taller'),
 (4, 'Congreso'),
-(5, 'Reunión Virtual');
+(5, 'Reunión Virtual'),
+(6, 'Otros Eventos'),
+(7, 'Externo');
 
 -- --------------------------------------------------------
 

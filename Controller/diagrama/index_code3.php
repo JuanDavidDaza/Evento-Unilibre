@@ -31,4 +31,9 @@ if ($idciudad != '0') {
 					GROUP BY evento_programas.programa";
 	$resultado = $link->query($sql);
 }
+
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/diagrama/index3.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

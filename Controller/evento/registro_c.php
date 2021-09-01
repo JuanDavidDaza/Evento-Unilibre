@@ -194,7 +194,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-function enviar_correo($email, $nombre, $nombreevento, $generalinfo, $nombretipo, $idevento, $mensaje)
+function  enviar_correo($email, $nombre, $nombreevento, $generalinfo, $nombretipo, $idevento, $mensaje)
 {
 
 	// Instantiation and passing `true` enables exceptions

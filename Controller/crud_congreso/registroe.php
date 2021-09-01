@@ -19,11 +19,12 @@
 	$generalinfo = (isset($_POST['generalinfo'])) ? $_POST['generalinfo'] : "";
 	$tematica = (isset($_POST['tematica'])) ? $_POST['tematica'] : "";
 	$responsable = (isset($_POST['responsable'])) ? $_POST['responsable'] : "";
+	
 
 
-	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad'];
+	$campos = ['nombreevento', 'idtipoeve', 'certificado', 'generalinfo', 'tematica', 'responsable', 'estado', 'idciudad','O_tipo','registro'];
 
-	$valores = [$nombreevento, 4, $certificado, $generalinfo, $tematica, $responsable, 'Activo', $idciudad];
+	$valores = [$nombreevento, 4, $certificado, $generalinfo, $tematica, $responsable, 'Activo', $idciudad,'',''];
 
 	if ($BD->AdicionarRegistro('evento', $campos, $valores)) {
 		//echo "<script> alert('Registro Exitoso') </script>";
@@ -48,4 +49,8 @@
 			']';
 	}
 
+
+
+	require_once "../../../Views/funtion/vistas/crud/ps.php";
 	require_once "../../../Views/funtion/crud_congreso/registroe.php";
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

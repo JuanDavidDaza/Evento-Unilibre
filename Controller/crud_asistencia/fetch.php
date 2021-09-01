@@ -76,10 +76,10 @@ if ($total_data > 0) {
         mysqli_stmt_store_result($stmt5);
 
         if (mysqli_stmt_num_rows($stmt5) == 1) {
-          $status = '<span class="label label-success"> Registrado</span>';
+          $status = '<span class="badge badge-success"> Registrado</span>';
           $user_status = 'Registrado';
         } else {
-          $status = '<span class="label label-danger"> No Registrado</span>';
+          $status = '<span class="badge badge-danger"> No Registrado</span>';
           $user_status = 'No Registrado';
         }
       }
@@ -95,10 +95,10 @@ if ($total_data > 0) {
           
           <td> ' . $row['idinstitucion'] . '</td>
           <td>' . $status . '</td>
-            <td><button type="button" name="action" class="button btn-info btn-xs action " data-user_id="' . $row["idasistente"] . '" data-user_status="' . $user_status . '">Registrar</button></td>
+            <td><button type="button" name="action" class="btn-info action " data-user_id="' . $row["idasistente"] . '" data-user_status="' . $user_status . '">Registrar</button></td>
 
-          <td><a href="detallesinscritos.php?idevento=' . $row['idevento'] . '&idasistente=' . $row['idasistente'] . '&id=' . $id . '"><span class="glyphicon glyphicon-search"></span></a></td>
-          <td><a href="#" data-href="eliminar.php?idasistente=' . $row['idasistente'] . '&idevento=' . $idevento . '&id=' . $id . '" data-toggle="modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+          <td><a href="detallesinscritos.php?idevento=' . $row['idevento'] . '&idasistente=' . $row['idasistente'] . '&id=' . $id . '"><span class="fas fa-search"></span></a></td>
+          <td><a href="#" data-href="eliminar.php?idasistente=' . $row['idasistente'] . '&idevento=' . $idevento . '&id=' . $id . '" data-toggle="modal" data-target="#confirm-delete"><span class="fas fa-trash"></span></a></td>
         </tr>
       ';
   }

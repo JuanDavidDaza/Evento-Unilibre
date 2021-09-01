@@ -13,4 +13,7 @@ if ($idciudad != '0') {
 	$sql = "SELECT idevento,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo,evento_tipo.nombretipo  FROM evento INNER JOIN evento_tipo ON evento_tipo.idtipoeve=evento.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE evento.idtipoeve='1' || evento.idtipoeve='5'";
 	$resultado = $link->query($sql);
 }
+
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/crud_reunion/imprimir.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

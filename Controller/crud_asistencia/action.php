@@ -15,7 +15,6 @@ if (isset($_POST["action"])) {
 
 		$status = '';
 		$idasistente1 = $_POST['user_id'];
-
 		$sql2 = "SELECT * FROM pre_inscripcion WHERE idasistente = '$idasistente1' and idevento='$idevento'";
 		$resultado2 = $link->query($sql2);
 		$row2 = $resultado2->fetch_array(MYSQLI_ASSOC);

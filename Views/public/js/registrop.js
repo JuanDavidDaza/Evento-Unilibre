@@ -1,1 +1,109 @@
-function seleccionado(){var t=$('select[name="idinstitucion"] option:selected').val();"0"==t||"7"==t||"8"==t||"9"==t||"10"==t||"11"==t||"12"==t?$("#otro").show():$("#otro").hide()}$(document).ready(function(){momentoActual=new Date,hora_actual=parseInt(momentoActual.getHours()),minuto_actual=parseInt(momentoActual.getMinutes()),segundo_actual=parseInt(momentoActual.getSeconds());var t=new Date,a=t.getDate(),e=t.getMonth()+1,o=t.getFullYear(),n=document.contactForm.hora_inicio.value,i=document.contactForm.hora_fin.value,c=document.contactForm.fecha_inicio.value;tipoevento=$("#tipoevento").val();var r=parseInt(n.split(":")[0]),s=parseInt(n.split(":")[1]),l=parseInt(c.split("-")[0]),t=parseInt(c.split("-")[1]),n=parseInt(c.split("-")[2]),c=parseInt(i.split(":")[0]),r=(parseInt(i.split(":")[1]),r-1);5!=tipoevento&&1!=tipoevento||(a==n&&e==t&&o==l?hora_actual>=r&&hora_actual<=c?(hora_actual>=r&&minuto_actual>=s&&(alert("Ya puedes registrarte"),document.contactForm.submit.disabled=!1),hora_actual>r&&(alert("Ya puedes registrarte"),document.contactForm.submit.disabled=!1)):(alert("Esta Reunión todavía no empieza o ya se terminó. Sólo admite inscripción el mismo día desde una hora antes, hasta la hora de finalización"),document.contactForm.submit.disabled=!0):(alert("Hoy no es la Reunión. Sólo admite inscripción el mismo día desde una hora antes, hasta la hora de finalización"),document.contactForm.submit.disabled=!0))}),window.onload=function(){var t=document.forms.contactForm["g-recaptcha-response"];t.required=!0,t.oninvalid=function(t){alertify.notify("Favor confirmar el captcha","warning",5,function(){console.log("dismissed")})}};
+window.onload = function() {
+    var recaptcha = document.forms["contactForm"]["g-recaptcha-response"];
+    recaptcha.required = true;
+    recaptcha.oninvalid = function(e) {
+        alertify.notify('Favor confirmar el captcha', 'warning', 5);
+    }
+}
+
+
+function seleccionado() {
+    var opt = $('select[name="idinstitucion"] option:selected').val();
+    //alert(opt);
+    if (
+      opt == "0" ||
+      opt == "7" ||
+      opt == "8" ||
+      opt == "9" ||
+      opt == "10" ||
+      opt == "11" ||
+      opt == "12"
+    ) {
+      $("#otro").show();
+    } else {
+      $("#otro").hide();
+    }
+  }
+  
+  $(document).ready(function () {
+    // $('#idinstitucion').select2();
+    //$('#idinstitucion').val('2').trigger('change.select2');
+  
+    //alert($('select[name="idinstitucion"] option:selected').text());
+  
+    momentoActual = new Date();
+    hora_actual = parseInt(momentoActual.getHours());
+    minuto_actual = parseInt(momentoActual.getMinutes());
+    segundo_actual = parseInt(momentoActual.getSeconds());
+  
+    var hoy = new Date();
+    var dd = hoy.getDate();
+    var mm = hoy.getMonth() + 1;
+    var yyyy = hoy.getFullYear();
+  
+    //alert(mm);
+  
+    var hora_evento_inicio = document.contactForm.hora_inicio.value;
+    var hora_evento_fin = document.contactForm.hora_fin.value;
+    var fecha_evento_inicio = document.contactForm.fecha_inicio.value;
+    //alert(hora_actual);
+  
+    //alert(minuto_actual);
+  
+    //var estado=<?php echo $hora; ?>;
+    tipoevento = $("#tipoevento").val();
+  
+    //inicio
+    var horas_evento_inicio1 = parseInt(hora_evento_inicio.split(":")[0]);
+    var minutos_evento_inicio = parseInt(hora_evento_inicio.split(":")[1]);
+  
+    var año_evento_inicio = parseInt(fecha_evento_inicio.split("-")[0]);
+    var mes_evento_inicio = parseInt(fecha_evento_inicio.split("-")[1]);
+    var dia_evento_inicio = parseInt(fecha_evento_inicio.split("-")[2]);
+    //fin
+    var horas_evento_fin = parseInt(hora_evento_fin.split(":")[0]);
+    var minutos_evento_fin = parseInt(hora_evento_fin.split(":")[1]);
+  
+    //alert(minutos_evento_inicio);
+  
+    var horas_evento_inicio = horas_evento_inicio1 - 1;
+    //alert(horas_evento_inicio);
+  
+    if (tipoevento == 5 || tipoevento == 1) {
+      if (
+        dd == dia_evento_inicio &&
+        mm == mes_evento_inicio &&
+        yyyy == año_evento_inicio
+      ) {
+        if (
+          hora_actual >= horas_evento_inicio &&
+          hora_actual <= horas_evento_fin
+        ) {
+          if (
+            hora_actual >= horas_evento_inicio &&
+            minuto_actual >= minutos_evento_inicio
+          ) {
+            alert("Ya puedes registrarte");
+            document.contactForm.submit.disabled = false;
+          }
+          if (hora_actual > horas_evento_inicio) {
+            alert("Ya puedes registrarte");
+            document.contactForm.submit.disabled = false;
+          }
+        } else {
+          alert(
+            "Esta Reunión todavía no empieza o ya se terminó. Sólo admite inscripción el mismo día desde una hora antes, hasta la hora de finalización"
+          );
+          document.contactForm.submit.disabled = true;
+        }
+      } else {
+        alert(
+          "Hoy no es la Reunión. Sólo admite inscripción el mismo día desde una hora antes, hasta la hora de finalización"
+        );
+        document.contactForm.submit.disabled = true;
+      }
+    } else {
+      // alert("No es una Reunión");
+    }
+  });
+

@@ -15,4 +15,7 @@ if ($idciudad != '0') {
 	$resultado = $link->query($sql);
 }
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/crud_congreso/imprimir.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";
+

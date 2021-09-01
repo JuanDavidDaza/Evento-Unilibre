@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="Views/public/css/evo-calendar.orange-coral.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
  
-  <title>Registro de Eventos || Universidad Libre Secciona Cali</title>
+  <title>Registro de Eventos | Unilibre</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="Views/public/fonts/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="Views/public/css/style.css">
@@ -124,7 +124,7 @@
                 <ul class="ks-cboxtags">
                   <?php
                   $brand = $eventofiltro->getBrand();
-                  $checkb = ['checkboxOne', 'checkboxTwo', 'checkboxThree', 'checkboxFour', 'checkboxFive'];
+                  $checkb = ['checkboxOne', 'checkboxTwo', 'checkboxThree', 'checkboxFour', 'checkboxFive' , 'checkboxThirtee'];
                   $ch = 0;
                   foreach ($brand as $brandDetails) {
                   ?>
@@ -179,15 +179,13 @@
 
   <div id="footer">
     <div class="container text-center">
-      <p>Copyright &copy; 2020 <a href="http://www.unilibrecali.edu.co" rel="nofollow">Universidad Libre Seccional Cali</a></p>
+      <p>Copyright &copy; 2021 <a href="http://www.unilibrecali.edu.co" rel="nofollow">Universidad Libre Seccional Cali</a></p>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <script type="text/javascript" src="Views/public/js/main.js"></script>
   <script src="Views/public/js/evo-calendar.js"></script>
   <script src="Views/public/js/select2.js"></script>

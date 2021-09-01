@@ -147,8 +147,8 @@ function box5($connect)
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fas fa-remove"></span> Cancelar</button>
+                <button type="submit" class="btn btn-primary"><span class="fas fa-floppy-disk"></span> Guardar</a>
                     </form>
             </div>
 
@@ -283,7 +283,7 @@ function box5($connect)
                     <h4 class="modal-title" id="myModalLabel">Agregar Nuevo</h4>
                 </center>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <button class="btn btn-refresh btn-sm refresh" onclick="location.reload()"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
+
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -298,8 +298,9 @@ function box5($connect)
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+                <button class="btn btn-success refresh" onclick="location.reload()"><span class="fas fa-refresh"></span> Actualizar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fas fa-remove"></span> Cancelar</button>
+                <button type="submit" class="btn btn-primary"><span class="fas fa-floppy-disk"></span> Guardar</a>
                     </form>
             </div>
 
@@ -342,7 +343,7 @@ function box5($connect)
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> Cancelar</button>
-                <button type="button" class="btn btn-success id"><span class="fa fa-trash"></span> Si</button>
+                <button type="button" class="btn btn-success id"> Si</button>
             </div>
 
         </div>
@@ -390,7 +391,7 @@ function box5($connect)
                     <h4 class="modal-title" id="myModalLabel">Agregar Nuevo Colaborador al Evento</h4>
                 </center>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <button class="btn btn-refresh btn-sm refresh" onclick="location.reload()"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
+
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -405,8 +406,9 @@ function box5($connect)
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+                <button class="btn btn-success refresh" onclick="location.reload()"><span class="fas fa-refresh"></span> Actualizar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fas fa-remove"></span> Cancelar</button>
+                <button type="submit" class="btn btn-primary"><span class="fas fa-floppy-disk"></span> Guardar</a>
                     </form>
             </div>
 
@@ -422,7 +424,7 @@ function box5($connect)
                     <h4 class="modal-title" id="myModalLabel">Agregar Nuevo</h4>
                 </center>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <button class="btn btn-refresh btn-sm refresh" onclick="location.reload()"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
+
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -437,8 +439,9 @@ function box5($connect)
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+                <button class="btn btn-success refresh" onclick="location.reload()"><span class="fas fa-refresh"></span> Actualizar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fas fa-remove"></span> Cancelar</button>
+                <button type="submit" class="btn btn-primary"><span class="fas fa-floppy-disk"></span> Guardar</a>
                     </form>
             </div>
 
@@ -501,7 +504,7 @@ function box5($connect)
                     <h4 class="modal-title" id="myModalLabel">Agregar Nuevo</h4>
                 </center>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <button class="btn btn-refresh btn-sm refresh" onclick="location.reload()"><span class="glyphicon glyphicon-refresh"></span> Actualizar</button>
+
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -530,8 +533,9 @@ function box5($connect)
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+                    <button class="btn btn-success refresh" onclick="location.reload()"><span class="fas fa-refresh"></span> Actualizar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fas fa-remove"></span> Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><span class="fas fa-floppy-disk"></span> Guardar</a>
                         </form>
                 </div>
 

@@ -109,4 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } //fin de agregar datos
 
 
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_programas/update.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

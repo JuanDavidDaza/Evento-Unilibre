@@ -39,4 +39,8 @@ if ($row3['nombresesion'] !== $row1['nombreevento']) {
 }
 
 
+
+
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/reporte.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

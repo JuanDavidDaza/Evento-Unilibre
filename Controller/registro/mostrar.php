@@ -69,4 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 //$sql = "SELECT * FROM evento $where";
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/registro/mostrar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

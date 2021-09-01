@@ -7,7 +7,9 @@ $nombreciudad = "";
 
 //eventos
 $acentos = $link->query("SET NAMES 'utf8'");
-$sql = "SELECT idevento,evento_tipo.nombretipo,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo FROM evento INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'";
+$sql = "SELECT idevento,evento_tipo.nombretipo,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo FROM evento INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'  AND evento_tipo.idtipoeve != 7 ";
+
+
 $resultado = $link->query($sql);
 $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
@@ -46,7 +48,7 @@ foreach ($resultado as $row2) {
 $datos = [];
 $idciudad = 0;
 $n1 = 0;
-$sqls = "SELECT evento.idevento,evento_tipo.nombretipo,evento.nombreevento,evento.generalinfo,evento_sesion.fechainicio, ciudad.nombre AS Ciudad FROM evento  INNER JOIN evento_sesion ON evento_sesion.idevento=evento.idevento INNER JOIN evento_tipo ON evento_tipo.idtipoeve=evento.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'  GROUP BY evento_sesion.idevento";
+$sqls = "SELECT evento.idevento,evento_tipo.nombretipo,evento.nombreevento,evento.generalinfo,evento_sesion.fechainicio, ciudad.nombre AS Ciudad FROM evento  INNER JOIN evento_sesion ON evento_sesion.idevento=evento.idevento INNER JOIN evento_tipo ON evento_tipo.idtipoeve=evento.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE estado='Activo'  AND evento_tipo.idtipoeve != 7  GROUP BY evento_sesion.idevento";
 $resp = $link->query($sqls);
 foreach ($resp as $rowevento) {
 

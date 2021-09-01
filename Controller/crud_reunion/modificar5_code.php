@@ -33,4 +33,7 @@ if (isset($_GET['delete_id'])) {
 	echo "<script>javascript: history.go(-1)</script>";
 	//header("Location: '$enlace'");
 }
-require_once "../../../Views/funtion/crud_reunion/modificar5.php";
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
+require_once "../../../Views/funtion/crud_reunion/modicar5.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

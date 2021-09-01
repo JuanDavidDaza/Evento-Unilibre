@@ -22,14 +22,30 @@ input[type="submit"] {
   margin-top: 60px;
   color: white;
   border: 0px;
-  background: linear-gradient(90deg, #bf4222, #e30f87);
+  background: linear-gradient(90deg, #bf4222, #c5144f);
   font-weight: 300;
   cursor: pointer;
   font-size: 18px;
 }
 
 input[type="submit"]:hover {
-  background: linear-gradient(90deg, #e30f87, #bf4222);
+  background: linear-gradient(90deg, #c5144f, #bf4222);
+}
+
+button[type="button"] {
+  width: 100%;
+  height: 50px;
+  margin-top: 60px;
+  color: white;
+  border: 0px;
+  background: linear-gradient(90deg, #bf4222, #c5144f);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button[type="button"]:hover {
+  background: linear-gradient(90deg, #c5144f, #bf4222);
 }
 .row {
   padding-bottom: 10px;

@@ -12,4 +12,8 @@ $ciudadresp = $link->query($ciudad1);
 foreach ($ciudadresp as $rowciudadresp) {
 	$nombreciudad = $rowciudadresp['nombre'];
 }
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_entidad/registro.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

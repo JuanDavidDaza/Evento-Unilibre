@@ -64,7 +64,7 @@ input[type="password"] {
   border: 0px;
   outline: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  color: #e30f87;
+  color: #a00606;
   font-size: 16px;
 }
 
@@ -74,14 +74,14 @@ input[type="submit"] {
   margin-top: 60px;
   color: white;
   border: 0px;
-  background: linear-gradient(90deg, #bf4222, #e30f87);
+  background: linear-gradient(90deg, #bf4222, #a00606);
   font-weight: 300;
   cursor: pointer;
   font-size: 18px;
 }
 
 input[type="submit"]:hover {
-  background: linear-gradient(90deg, #e30f87, #bf4222);
+  background: linear-gradient(90deg, #a00606, #bf4222);
 }
 .text-footer {
   display: block;
@@ -145,14 +145,14 @@ input[type="submit"]:hover {
   display: block;
   padding: 20px;
   margin-top: 40px;
-  background: linear-gradient(90deg, #bf4222, #e30f87);
+  background: linear-gradient(90deg, #bf4222, #a00606);
   color: white;
   font-size: 20px;
   font-weight: 300;
 }
 
 .close-sesion:hover {
-  background: linear-gradient(90deg, #e30f87, #bf4222);
+  background: linear-gradient(90deg, #a00606, #bf4222);
 }
 /* _____________cuando llegue determinado tamaño se adacte ______ */
 

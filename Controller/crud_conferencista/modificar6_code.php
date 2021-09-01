@@ -10,4 +10,6 @@
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
 $nombreevento=$row['nombreevento'];
 
-require_once "../../../Views/funtion/crud_conferencista/modificar6.php";
+require_once "../../../Views/funtion/vistas/crud/ps.php";
+	require_once "../../../Views/funtion/crud_conferencista/modificar6.php";
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

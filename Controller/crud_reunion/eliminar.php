@@ -55,4 +55,7 @@ $resultado4 = $link->query($sql4);
 $sql = "DELETE FROM evento WHERE idevento = '$idevento'";
 $resultado = $link->query($sql);
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_reunion/eliminar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

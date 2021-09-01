@@ -5,14 +5,16 @@
 		<div class="card-header">
 			<h6 class="m-0 font-weight-bold text-primary">Editar Información</h6>
 		</div>
-		<div class="card-body">
+		<div class="card-body"> 
 
-			<div class="jumbotron">
+			<div class="text-center card border-bottom-danger">
 				<div class="container text-center">
 					<img class="img-thumbnail rounded mx-auto d-block" src="../../Content/user/<?php echo $row['foto']; ?>" width="150">
+					<br><br>
 					<h4>Nombre de Usuario | <span class="badge badge-danger"><strong><?php echo $row['usuario']; ?></strong></span></h4>
 				</div>
 			</div>
+			<br><br><br>
 
 			<div class="card">
 				<div class="card-header">

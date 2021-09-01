@@ -52,4 +52,7 @@
 
 
 
+
+	require_once "../../../Views/funtion/vistas/crud/ps.php";
 	require_once "../../../Views/funtion/permisos/registroe.php";
+	require_once "../../../Views/funtion/vistas/crud/pi.php";

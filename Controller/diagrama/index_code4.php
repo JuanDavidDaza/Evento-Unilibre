@@ -31,4 +31,8 @@ if ($idciudad != '0') {
 					GROUP BY evento_entidades.entidad";
 	$resultado = $link->query($sql);
 }
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/diagrama/index4.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

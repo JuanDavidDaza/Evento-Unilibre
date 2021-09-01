@@ -3,7 +3,7 @@
 
 <head>
 
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../../Views/public/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../Views/public/js/jquery-ui.structure.css" type="text/css" media="all" />
   <link rel="stylesheet" href="../../Views/public/js/jquery-ui.theme.css" type="text/css" media="all" />
-  <script src="../../Views/public/js/jquery-ui.min.js"></script>
+  
 
 
 

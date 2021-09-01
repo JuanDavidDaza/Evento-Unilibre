@@ -28,4 +28,6 @@ if (isset($_GET['programa']) || ($_GET['programa'] = "")) {
 
 
 
+require_once "../../../Views/funtion/vistas/crud/ps2.php";
 require_once "../../../Views/funtion/diagrama/diagrama3.php";
+require_once "../../../Views/funtion/vistas/crud/pi2.php";

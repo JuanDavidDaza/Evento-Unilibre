@@ -9,4 +9,7 @@ $sql = "DELETE FROM entidad WHERE identidad = '$identidad'";
 $resultado = $link->query($sql);
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_entidad/eliminar.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

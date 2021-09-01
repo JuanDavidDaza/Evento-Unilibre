@@ -14,4 +14,7 @@ foreach ($ciudadresp as $rowciudadresp) {
 
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_programas/registro.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

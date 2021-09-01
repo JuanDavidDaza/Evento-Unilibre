@@ -11,4 +11,8 @@ $nombreevento = $row['nombreevento'];
 $sql1 = "SELECT * FROM evento_sesion WHERE idevento = '$idevento'";
 $resultado1 = $link->query($sql1);
 $row1 = $resultado1->fetch_array(MYSQLI_ASSOC);
+
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_reunion/modificar2.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		$mensaje = "";
 		$idevento = $_GET['idevento'];
 
-		$sql = "SELECT idevento,evento_tipo.nombretipo,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo FROM evento INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE idevento='$idevento'";
+		$sql = "SELECT idevento,evento_tipo.nombretipo,nombreevento,certificado,tematica,responsable,estado,ciudad.nombre,generalinfo,registro FROM evento INNER JOIN evento_tipo ON evento.idtipoeve=evento_tipo.idtipoeve INNER JOIN ciudad ON evento.idciudad=ciudad.idciudad WHERE idevento='$idevento'";
 		$resultado = $link->query($sql);
 		$row = $resultado->fetch_array(MYSQLI_ASSOC);
 
@@ -61,3 +61,5 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
 
 require('Views/evento/detalles.php');
+
+

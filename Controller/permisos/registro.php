@@ -42,5 +42,6 @@ for ($i = 0; $i < 8; $i++) {
 }
 
 
-
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/permisos/registro.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

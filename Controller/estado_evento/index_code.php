@@ -11,4 +11,7 @@ if ($idciudad != '0') {
 }
 
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/estado_evento/index.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

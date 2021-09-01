@@ -46,4 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	die();
 }
 
+
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require_once "../../../Views/funtion/crud_reunion/detalles.php";
+require_once "../../../Views/funtion/vistas/crud/pi.php";

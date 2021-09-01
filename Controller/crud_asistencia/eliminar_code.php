@@ -16,5 +16,6 @@ $sql = "DELETE FROM pre_inscripcion WHERE idasistente = '$idasistente' and ideve
 $resultado = $link->query($sql);
 //echo $sql;
 
-
+require_once "../../../Views/funtion/vistas/crud/ps.php";
 require('../../../Views/funtion/crud_asistencia/eliminar.php');
+require_once "../../../Views/funtion/vistas/crud/pi.php";

@@ -275,9 +275,9 @@ CREATE TABLE IF NOT EXISTS `evento_usuario` (
 DROP TABLE IF EXISTS `institucion_educativa`;
 CREATE TABLE IF NOT EXISTS `institucion_educativa` (
   `idinstitucion` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Codigo de la Institución',
-  `nombre` varchar(150) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Nombre',
+  `nombre` varchar(800) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Nombre',
   `telefono` varchar(12) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Telefono',
-  `direccion` varchar(200) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Direccion de la Instititución',
+  `direccion` varchar(800) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Direccion de la Instititución',
   `idciudad` int(10) NOT NULL COMMENT 'Codigo Ciudad',
   PRIMARY KEY (`idinstitucion`,`idciudad`)
 ) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;

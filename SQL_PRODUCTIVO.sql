@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS `asistente_sesion` (
   `idevento` int(13) NOT NULL COMMENT 'Codigo del Evento',
   `idsesion` varchar(13) NOT NULL COMMENT 'Codigo de la Sesion',
   `tipoid` varchar(4) DEFAULT NULL COMMENT 'Tipo de Documento',
-  `nombre` varchar(50) DEFAULT NULL COMMENT 'Nombre del asistente',
-  `correo` varchar(50) DEFAULT NULL COMMENT 'Correo',
-  `celular` varchar(10) DEFAULT NULL COMMENT 'Celular',
+  `nombre` varchar(800) DEFAULT NULL COMMENT 'Nombre del asistente',
+  `correo` varchar(800) DEFAULT NULL COMMENT 'Correo',
+  `celular` varchar(30) DEFAULT NULL COMMENT 'Celular',
   `genero` varchar(20) DEFAULT NULL COMMENT 'Genero',
   `idinstitucion` int(5) DEFAULT NULL COMMENT 'Codigo de la Institución',
   PRIMARY KEY (`id`,`idasistente`,`idevento`,`idsesion`),
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `asistente_sesion` (
 DROP TABLE IF EXISTS `ciudad`;
 CREATE TABLE IF NOT EXISTS `ciudad` (
   `idciudad` int(3) NOT NULL COMMENT 'Codigo de la Ciudad',
-  `nombre` varchar(30) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre de la Ciudad',
+  `nombre` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre de la Ciudad',
   PRIMARY KEY (`idciudad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -81,14 +81,14 @@ INSERT INTO `ciudad` (`idciudad`, `nombre`) VALUES
 DROP TABLE IF EXISTS `conferencistas`;
 CREATE TABLE IF NOT EXISTS `conferencistas` (
   `foto` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `cedula` varchar(10) NOT NULL COMMENT 'Numero de Indentificación',
-  `nombre` varchar(70) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre',
-  `celular1` varchar(10) DEFAULT NULL COMMENT 'Celular 1',
-  `celular2` varchar(10) DEFAULT NULL COMMENT 'Celular 2',
-  `correo` varchar(50) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Correo',
-  `linkedin` varchar(50) CHARACTER SET latin1 DEFAULT NULL COMMENT 'LinkedIn',
-  `perfil` varchar(400) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Perfil del Conferencista',
-  `pais` varchar(50) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Codigo del Pais',
+  `cedula` varchar(30) NOT NULL COMMENT 'Numero de Indentificación',
+  `nombre` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre',
+  `celular1` varchar(30) DEFAULT NULL COMMENT 'Celular 1',
+  `celular2` varchar(30) DEFAULT NULL COMMENT 'Celular 2',
+  `correo` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Correo',
+  `linkedin` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'LinkedIn',
+  `perfil` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Perfil del Conferencista',
+  `pais` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Codigo del Pais',
   PRIMARY KEY (`cedula`),
   KEY `conferencistapais` (`pais`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -102,8 +102,8 @@ CREATE TABLE IF NOT EXISTS `conferencistas` (
 DROP TABLE IF EXISTS `entidad`;
 CREATE TABLE IF NOT EXISTS `entidad` (
   `identidad` int(10) NOT NULL AUTO_INCREMENT,
-  `nombreentidad` varchar(100) CHARACTER SET latin2 DEFAULT NULL,
-  `url` varchar(100) CHARACTER SET latin2 DEFAULT NULL,
+  `nombreentidad` varchar(800) CHARACTER SET latin2 DEFAULT NULL,
+  `url` varchar(800) CHARACTER SET latin2 DEFAULT NULL,
   `idciudad` int(10) DEFAULT NULL,
   PRIMARY KEY (`identidad`),
   KEY `entidad_ciudad` (`idciudad`)
@@ -118,12 +118,12 @@ CREATE TABLE IF NOT EXISTS `entidad` (
 DROP TABLE IF EXISTS `evento`;
 CREATE TABLE IF NOT EXISTS `evento` (
   `idevento` int(13) NOT NULL AUTO_INCREMENT COMMENT 'Codigo del Evento',
-  `nombreevento` varchar(100) CHARACTER SET latin1 NOT NULL COMMENT 'Nombre del Evento',
+  `nombreevento` varchar(800) CHARACTER SET latin1 NOT NULL COMMENT 'Nombre del Evento',
   `idtipoeve` int(10) DEFAULT NULL COMMENT 'Id Tipo de Evento',
   `certificado` varchar(15) CHARACTER SET latin1 DEFAULT NULL COMMENT '¿Realiza Certificado? Si(1) No(0)',
   `generalinfo` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Descripción del Evento',
-  `tematica` varchar(100) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Tema del Evento',
-  `responsable` varchar(100) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Responsable',
+  `tematica` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Tema del Evento',
+  `responsable` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Responsable',
   `estado` varchar(15) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Estado del Evento',
   `idciudad` int(3) DEFAULT NULL COMMENT 'Codigo de la Ciudad',
   `O_tipo` varchar(50) NOT NULL,
@@ -144,10 +144,10 @@ CREATE TABLE IF NOT EXISTS `evento` (
 DROP TABLE IF EXISTS `evento_conferencistas`;
 CREATE TABLE IF NOT EXISTS `evento_conferencistas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) NOT NULL COMMENT 'Nombre del Conferencista',
+  `nombre` varchar(800) NOT NULL COMMENT 'Nombre del Conferencista',
   `idevento` int(13) NOT NULL COMMENT 'Codigo del evento',
-  `conferencia` varchar(120) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre de la Conferencia',
-  `duracion` varchar(25) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Duración de la Conferencia',
+  `conferencia` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nombre de la Conferencia',
+  `duracion` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Duración de la Conferencia',
   PRIMARY KEY (`id`,`idevento`),
   KEY `cedulaconf` (`nombre`),
   KEY `idcodigoconf` (`idevento`)
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `evento_conferencistas` (
 DROP TABLE IF EXISTS `evento_entidades`;
 CREATE TABLE IF NOT EXISTS `evento_entidades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `entidad` int(50) NOT NULL COMMENT 'Entidad',
+  `entidad` int(800) NOT NULL COMMENT 'Entidad',
   `idevento` int(13) NOT NULL,
   PRIMARY KEY (`id`,`idevento`),
   KEY `entidades` (`entidad`),
@@ -179,10 +179,10 @@ DROP TABLE IF EXISTS `evento_foto`;
 CREATE TABLE IF NOT EXISTS `evento_foto` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `idevento` int(15) NOT NULL,
-  `nombre` varchar(50) DEFAULT NULL,
+  `nombre` varchar(800) DEFAULT NULL,
   `foto` varchar(100) DEFAULT NULL,
-  `tipo` varchar(20) DEFAULT NULL,
-  `detalles` varchar(70) DEFAULT NULL,
+  `tipo` varchar(800) DEFAULT NULL,
+  `detalles` varchar(800) DEFAULT NULL,
   PRIMARY KEY (`id`,`idevento`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `evento_foto` (
 DROP TABLE IF EXISTS `evento_programas`;
 CREATE TABLE IF NOT EXISTS `evento_programas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `programa` int(50) NOT NULL COMMENT 'Programa',
+  `programa` int(800) NOT NULL COMMENT 'Programa',
   `idevento` int(13) NOT NULL COMMENT 'Codigo del Evento',
   PRIMARY KEY (`id`,`programa`,`idevento`),
   KEY `evento12` (`idevento`),
@@ -212,13 +212,13 @@ DROP TABLE IF EXISTS `evento_sesion`;
 CREATE TABLE IF NOT EXISTS `evento_sesion` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Codigo de la Sesion',
   `idevento` int(13) NOT NULL COMMENT 'Codigo del Evento',
-  `nombresesion` varchar(100) CHARACTER SET latin1 NOT NULL COMMENT 'Nombre de la Sesión',
-  `audsalon` varchar(70) CHARACTER SET latin1 DEFAULT NULL COMMENT 'lugar',
+  `nombresesion` varchar(800) CHARACTER SET latin1 NOT NULL COMMENT 'Nombre de la Sesión',
+  `audsalon` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'lugar',
   `horainicio` time DEFAULT NULL COMMENT 'Hora Inicio',
   `horafin` time DEFAULT NULL COMMENT 'Hora Fin',
   `fechainicio` date DEFAULT NULL COMMENT 'Fecha Inicio',
   `fechafin` date DEFAULT NULL COMMENT 'Fecha Fin',
-  `observacion` varchar(300) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Observación',
+  `observacion` varchar(800) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Observación',
   `posicion` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`,`idevento`),
   KEY `id` (`id`),
@@ -318,9 +318,9 @@ DROP TABLE IF EXISTS `pre_inscripcion`;
 CREATE TABLE IF NOT EXISTS `pre_inscripcion` (
   `idasistente` int(10) NOT NULL COMMENT 'Numero del Documento',
   `tipoid` varchar(10) DEFAULT NULL COMMENT 'Tipo de Documento',
-  `nombre` varchar(50) DEFAULT NULL COMMENT 'Nombre del Asistente',
-  `correo` varchar(50) DEFAULT NULL COMMENT 'Correo',
-  `celular` varchar(10) DEFAULT NULL COMMENT 'Celular',
+  `nombre` varchar(800) DEFAULT NULL COMMENT 'Nombre del Asistente',
+  `correo` varchar(800) DEFAULT NULL COMMENT 'Correo',
+  `celular` varchar(15) DEFAULT NULL COMMENT 'Celular',
   `genero` varchar(20) DEFAULT NULL COMMENT 'Genero',
   `idinstitucion` int(4) DEFAULT NULL COMMENT 'Codigo de la Institución',
   `idevento` int(13) NOT NULL COMMENT 'Codigo del Evento',
@@ -338,8 +338,8 @@ CREATE TABLE IF NOT EXISTS `pre_inscripcion` (
 DROP TABLE IF EXISTS `programas`;
 CREATE TABLE IF NOT EXISTS `programas` (
   `idprograma` int(10) NOT NULL AUTO_INCREMENT,
-  `nombreprograma` varchar(100) DEFAULT NULL,
-  `url` varchar(100) DEFAULT NULL,
+  `nombreprograma` varchar(800) DEFAULT NULL,
+  `url` varchar(8100) DEFAULT NULL,
   `idciudad` int(10) DEFAULT NULL,
   PRIMARY KEY (`idprograma`),
   KEY `programa_idciudad` (`idciudad`)
@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `programas` (
 DROP TABLE IF EXISTS `registro`;
 CREATE TABLE IF NOT EXISTS `registro` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
-  `registro` varchar(50) DEFAULT NULL,
+  `registro` varchar(800) DEFAULT NULL,
   `idciudad` int(5) DEFAULT NULL,
   `idasistente` varchar(12) DEFAULT NULL,
   `idevento` int(5) DEFAULT NULL,
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `clave`, `rol_id`, `idciudad`, `foto`) VALUES
-(1, 'Juandavid5845', 'juandavid5845@hotmail.com', 'RkMxa1lEZVpMYjcrTUl6MFBIczdjdz09', 1, 1, '1620623974_Foto.PNG');
+(1, 'Admin', 'Admin', 'RkMxa1lEZVpMYjcrTUl6MFBIczdjdz09', 1, 1, '1620623974_Foto.PNG');
 
 --
 -- Restricciones para tablas volcadas

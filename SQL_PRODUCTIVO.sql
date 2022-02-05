@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `evento_conferencistas` (
 DROP TABLE IF EXISTS `evento_entidades`;
 CREATE TABLE IF NOT EXISTS `evento_entidades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `entidad` int(800) NOT NULL COMMENT 'Entidad',
+  `entidad` int(13) NOT NULL COMMENT 'Entidad',
   `idevento` int(13) NOT NULL,
   PRIMARY KEY (`id`,`idevento`),
   KEY `entidades` (`entidad`),
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `evento_foto` (
 DROP TABLE IF EXISTS `evento_programas`;
 CREATE TABLE IF NOT EXISTS `evento_programas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `programa` int(800) NOT NULL COMMENT 'Programa',
+  `programa` int(13) NOT NULL COMMENT 'Programa',
   `idevento` int(13) NOT NULL COMMENT 'Codigo del Evento',
   PRIMARY KEY (`id`,`programa`,`idevento`),
   KEY `evento12` (`idevento`),
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `clave`, `rol_id`, `idciudad`, `foto`) VALUES
-(1, 'Admin', 'Admin', 'RkMxa1lEZVpMYjcrTUl6MFBIczdjdz09', 1, 1, '1620623974_Foto.PNG');
+(1, 'Admin', 'admins@hotmail.com', 'RkMxa1lEZVpMYjcrTUl6MFBIczdjdz09', 1, 1, '1620623974_Foto.PNG');
 
 --
 -- Restricciones para tablas volcadas
